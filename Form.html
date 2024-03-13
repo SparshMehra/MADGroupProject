@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    
+
     <div class="container">
-        <div class="title">Registration</div>
+        <div class="title">Personal Information</div>
         <form action="#">
             <div class="user-details">
                 <div class="input-box">
@@ -34,36 +34,18 @@
                     <button type="button" onclick="speakInput(this)"></button>
                 </div>
                 <div class="input-box">
-                    <span class="details">Date of Passing</span>
-                    <input type="date" placeholder="Enter your Date of Passing">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter your email">
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <button type="button" onclick="speakInput(this)"></button>
                 </div>
                 <div class="input-box">
-                    <span class="details">Relationship Status</span>
-                    <input type="text" placeholder="Enter your Relationship Status">
-                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <span class="details">Contact number</span>
+                    <input type="number" placeholder="Enter your contact number">
+                    <button type="button" onclick="speaCkQuestion(this)"></button>
                     <button type="button" onclick="speakInput(this)"></button>
                 </div>
-                <div class="input-box">
-                    <span class="details">Significant Achievements</span>
-                    <input type="text" placeholder="Enter your Significant Achievements">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
-                <div class="input-box">
-                    <span class="details">Pick a grave marker</span>
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <select id="grave-marker" onchange="speakOption(this)">
-                        <option value="" disabled selected>Pick a marker</option>
-                        <option value="Tree">Tree</option>
-                        <option value="Rock">Rock</option>
-                        <option value="Flower Bed">Flower Bed</option>
-                        <option value="Bench">Bench</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                    <button type="button" onclick="speakSelectedOption(this)"></button>
-                </div>
+
                 <div class="input-box">
                     <span class="details">Gender</span>
                     <button type="button" onclick="speakQuestion(this)"></button>
@@ -83,14 +65,37 @@
                     <input type="text" id="otherGender" placeholder="Enter your gender">
                     <button type="button" onclick="speakGenderInput()"></button>
                 </div>
+                <br><br>
+                <div class="title">Burial Information</div>
+                <div class="input-box">
+                    <span class="details">Significant Achievements</span>
+                    <input type="text" placeholder="Enter your Significant Achievements">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <div class="input-box">
+                    <span class="details">Pick a grave marker</span>
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <select id="grave-marker" onchange="speakOption(this)">
+                        <option value="" disabled selected>Pick a marker</option>
+                        <option value="Tree">Tree</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Flower Bed">Flower Bed</option>
+                        <option value="Bench">Bench</option>
+                        <option value="GPS">GPS coordinates</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <button type="button" onclick="speakSelectedOption(this)"></button>
+                </div>
             </div>
-             <div class="button">
+
+            <div class="button">
                 <input type="submit" value="Submit">
             </div>
         </form>
+
     </div>
 
 
 
 </body>
-
