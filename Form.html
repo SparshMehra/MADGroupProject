@@ -64,14 +64,35 @@
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <input type="text" id="otherGender" placeholder="Enter your gender">
                     <button type="button" onclick="speakGenderInput()"></button>
+                    <span>
                 </div>
-                <br><br>
+                
                 <div class="title">Burial Information</div>
                 <div class="input-box">
                     <span class="details">Significant Achievements</span>
                     <input type="text" placeholder="Enter your Significant Achievements">
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <div class="input-box">
+                    <span class="details">Grave Inscription</span>
+                    <input type="text" placeholder="Enter your Grave Inscription">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <div class="input-box">
+                    <span class="details">Select a burial method</span>
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <select id="burial-method" onchange="speakOption(this)">
+                        <option value="" disabled selected>Pick a burial method</option>
+                        <option value="Green-burial">Green burial</option>
+                        <option value="Mushroom-burial-suit">Mushroom Burial Suit</option>
+                        <option value="Burial-pod">Natural Burial Pods</option>
+                        <option value="Sea-burial">Sea Burial</option>
+                        <option value="Woodland burial">Woodland Burial</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <button type="button" onclick="speakSelectedOption(this)"></button>
                 </div>
                 <div class="input-box">
                     <span class="details">Pick a grave marker</span>

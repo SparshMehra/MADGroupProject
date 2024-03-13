@@ -29,6 +29,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    padding-top: 200px; /* Add padding to the top */
 }
 
 .container .title {
