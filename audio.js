@@ -1,4 +1,9 @@
 
+/*
+    This file contains the functionality for a responsive webform for natural burial 
+    initiative created for people with accessbility needs.
+    Authoer(s): Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
+*/
 function speakInput(button) {
     var inputBox = button.parentNode;
     var input = inputBox.querySelector('input[type="text"], input[type="date"]');
