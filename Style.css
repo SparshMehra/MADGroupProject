@@ -1,7 +1,7 @@
 /*
     This file contains the styles for a responsive webform for natural burial 
     initiative created for people with accessbility needs.
-    Author(s): Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
+    Author(s): Mohammed Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 */
 
 * {
@@ -29,6 +29,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    padding-top: 200px; /* Add padding to the top */
 }
 
 .container .title {
