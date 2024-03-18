@@ -1,0 +1,16 @@
+body{
+    background-image: url('pexels-fabian-reitmeier-707915.jpg');
+    background-size: cover;
+    /* Prevent the image from repeating */
+    background-repeat: no-repeat; 
+    background-position: top; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.buttons{
+    color-scheme:  dark light;
+    padding: 20px;  
+    border-radius: 8px;
+}
