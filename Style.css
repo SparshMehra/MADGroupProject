@@ -1,97 +1,47 @@
-<<<<<<< HEAD
-=======
 /*
     This file contains the styles for a responsive webform for natural burial 
     initiative created for people with accessbility needs.
     Author(s): Mohammed Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 */
 
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
-}
-
-=======
     font-size: 105%; /* Increase font size by 5% */
 }
 
 
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
 body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url(pexels-lumn-167699.jpg);
+    
 }
 
-<<<<<<< HEAD
-
-.container {
-    max-width: 700px;
-    width: 100%;
-    background-image:transparent;
-=======
 .container {
     max-width: 700px;
     width: 100%;
     background-image: transparent;
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
     padding: 25px 30px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-}
-
-.container .title {
-    font-size: 40px;
-=======
     padding-top: 200px; /* Add padding to the top */
 }
 
 .container .title {
     font-size: 42px; /* Adjusted font size */
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
     font-weight: 500;
 }
 
 .container .user-details {
-<<<<<<< HEAD
-    font-size: 10;
-=======
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
     display: flex;
     flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-form .user-details .input-box {
-    width: calc(50% - 20px);
-    margin: 10px;
-}
-.user-details .input-box input{
-    height: 45px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 16px;
-    border-bottom-width: 2px;
-    transition: all 0,3s ease;
-
-
-}
-form .gender-details .gender-title{
-    font-size: 20px;
-    font-weight: 500;
-}
-form .gender-details .category{
-=======
 .user-details .input-box {
     width: calc(50% - 30px);
     margin: 15px; /* Adjusted margin */
@@ -172,39 +122,10 @@ form .gender-details .gender-title {
 }
 
 form .gender-details .category {
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
     display: flex;
     width: 80%;
     margin: 14px 0;
     justify-content: space-between;
-<<<<<<< HEAD
-
-}
-.gender-details .category label{
-    display: flex;
-    align-items: center;
-}
-.gender-details .category .dot{
-    height: 18px;
-    width: 18px;
-    background:#d9d9d9;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 5px solid transparent;
-}
-form .button{
-    height: 45px;
-    margin: 45px 0;  
-}
-form .button input{
-    height: 100%;
-    width: 100%;
-}
-
-
-
-
-=======
 }
 
 .gender-details .category label {
@@ -230,4 +151,46 @@ form .button input {
     height: 100%;
     width: 100%;
 }
->>>>>>> 742f8edbd40788fe269b3517931ca818fff4e837
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* Styling for select element in dark mode */
+.dark-mode select {
+    color: #ffffff; /* Text color */
+    background-color: #333333; /* Input background color */
+    border: 1px solid #ffffff; /* Border color */
+}
+
+/* Styling for input field in dark mode */
+.dark-mode input[type="text"],
+.dark-mode input[type="date"],
+.dark-mode input[type="email"],
+.dark-mode input[type="password"],
+.dark-mode input[type="number"],
+.dark-mode textarea {
+    color: #ffffff; /* Text color */
+    background-color: #333333; /* Input background color */
+    border: 1px solid #ffffff; /* Border color */
+}
+
+/* Styling for submit button in dark mode */
+.dark-mode input[type="submit"] {
+    color: #ffffff; /* Text color */
+    background-color: #333333; /* Button background color */
+    border: 1px solid #ffffff; /* Border color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Darken button background color on hover */
+.dark-mode input[type="submit"]:hover {
+    background-color: #1c1c1c;
+}

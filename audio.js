@@ -78,3 +78,8 @@ function speak(text) {
     var utterance = new SpeechSynthesisUtterance(text);
     synth.speak(utterance);
 }
+// Function to toggle dark mode
+            function toggleDarkMode() {
+                const body = document.body;
+                body.classList.toggle('dark-mode');
+            }
