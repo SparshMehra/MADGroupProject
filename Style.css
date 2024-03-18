@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(pexels-lumn-167699.jpg);
+}
+
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-image:transparent;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .title {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.container .user-details {
+    font-size: 10;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .user-details .input-box {
+    width: calc(50% - 20px);
+    margin: 10px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0,3s ease;
+
+
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background:#d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+form .button{
+    height: 45px;
+    margin: 45px 0;  
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
