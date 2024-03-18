@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Form</title>
+    <title>Natural Burial Form</title>
     <link rel="stylesheet" href="Style.css">
     <script src="audio.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,13 +70,13 @@
                 <div class="title">Burial Information</div>
                 <div class="input-box">
                     <span class="details">Significant Achievements</span>
-                    <input type="text" placeholder="Enter your Significant Achievements">
+                    <input type="text" placeholder="Significant Achievements">
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <button type="button" onclick="speakInput(this)"></button>
                 </div>
                 <div class="input-box">
                     <span class="details">Grave Inscription</span>
-                    <input type="text" placeholder="Enter your Grave Inscription">
+                    <input type="text" placeholder="Grave Inscription">
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <button type="button" onclick="speakInput(this)"></button>
                 </div>
@@ -84,7 +84,7 @@
                     <span class="details">Select a burial method</span>
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <select id="burial-method" onchange="speakOption(this)">
-                        <option value="" disabled selected>Pick a burial method</option>
+                        <option value="" disabled selected>Burial methods</option>
                         <option value="Green-burial">Green burial</option>
                         <option value="Mushroom-burial-suit">Mushroom Burial Suit</option>
                         <option value="Burial-pod">Natural Burial Pods</option>
@@ -98,7 +98,7 @@
                     <span class="details">Pick a grave marker</span>
                     <button type="button" onclick="speakQuestion(this)"></button>
                     <select id="grave-marker" onchange="speakOption(this)">
-                        <option value="" disabled selected>Pick a marker</option>
+                        <option value="" disabled selected>Grave markers</option>
                         <option value="Tree">Tree</option>
                         <option value="Rock">Rock</option>
                         <option value="Flower Bed">Flower Bed</option>
