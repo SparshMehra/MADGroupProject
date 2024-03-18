@@ -6,11 +6,11 @@
 */
 function speakInput(button) {
     var inputBox = button.parentNode;
-    var input = inputBox.querySelector('input[type="text"], input[type="date"]');
+    var input = inputBox.querySelector('input[type="text"], input[type="date"], input[type="email"], input[type="number"]');
     var inputText = input.value.trim();
 
     if (inputText === '') {
-        speak("You have not entered any input.");
+        speak("You have not entered any input for " + input.previousElementSibling.textContent);
     } else {
         speak(inputText);
     }
