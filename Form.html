@@ -1,133 +1,191 @@
 <!--
     This is a responsive webform for natural burial initiative
     created for people with accessbility needs.
-    Author(s): Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
+    Author(s): Mohammad Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <!--Title of the form-->
     <title>Natural Burial Form</title>
+    <!--Linking the styles css file-->
     <link rel="stylesheet" href="Style.css">
+    <!--Linking the tailwind styles-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!--Adding the javascript file (contains the functionality for the accesibility  features)-->
     <script src="audio.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<!-- Initially set to light mode -->
 
-<body class="light-mode"> <!-- Initially set to light mode -->
-    
-    <div class="container flex justify-center items-center h-screen relative"> <!-- Centering the container -->
+<body class="light-mode">
+    <!-- Centering the container -->
+    <div class="container flex justify-center items-center h-screen relative">
         <!-- Dark mode toggle button -->
         <button id="darkModeToggle" onclick="toggleDarkMode()" class="absolute top-0 right-0 m-4">Dark Mode</button>
 
-    <div class="container">
-        <div class="title">Personal Information</div>
-        <form action="#">
-            <div class="user-details">
-                <div class="input-box">
-                    <span class="details">Full Name</span>
-                    <input type="text" placeholder="Enter your Full Name">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
+        <!--The actual form starts from here, it contains the personal and burial information sections-->
+        <div class="container">
+            <!--Title for the personal information section-->
+            <div class="title">Personal Information</div>
+            <!--***-->
+            <form action="#">
+                <!--div for storing the user information -->
+                <div class="user-details">
+                    <!--div for the name question-->
+                    <div class="input-box">
+                        <!--Adding the name field and the the title for the field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <span class="details">Full Name</span>
+                        <!--Input text field for the name-->
+                        <input type="text" placeholder="Enter your Full Name">
+                        <!--Buttons to speak the field contents as well as the questions-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <button type="button" onclick="speakInput(this)"></button>
+                    </div>
+                    <!--div for the date of birth question-->
+                    <div class="input-box">
+                        <!--Adding the date of birth field and the the title for the field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <span class="details">Date of Birth</span>
+                        <!--Input "date" field-->
+                        <input type="date" placeholder="Enter your Date of Birth">
+                        <!--Accessibility buttons to read the question and the input out aloud-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <button type="button" onclick="speakInput(this)"></button>
+                    </div>
+                    <!--div for the email question-->
+                    <div class="input-box">
+                        <!--Adding the email field and the the title for the field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <span class="details">Email</span>
+                        <!--input field for the email-->
+                        <input type="email" placeholder="Enter your email">
+                        <!--accessibility buttons to read out the question and the input-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <button type="button" onclick="speakInput(this)"></button>
+                    </div>
+                    <!--div for the contact number field-->
+                    <div class="input-box">
+                        <!--Adding the contact number field and the the title for the field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <span class="details">Contact number</span>
+                        <!--input field for the contact number-->
+                        <input type="number" placeholder="Enter your contact number">
+                        <!--buttons for accessibility: reading out the question and the input-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <button type="button" onclick="speakInput(this)"></button>
+                    </div>
+                    <!--div for the gender field-->
+                    <div class="input-box">
+                        <!--Adding the gender field and the the title for the field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <span class="details">Gender</span>
+                        <!--button to read out the question for the gender-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <!--drop down select box with options for male, female, prefer not to say or other-->
+                        <select id="gender" onchange="showGenderInput()">
+                            <option value="" disabled selected>Your gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                        <!--button to read out the selevcted gender option-->
+                        <button type="button" onclick="speakSelectedOption(this)"></button>
+                    </div>
+                    <!--if the user chooses the other option for the gender, a new input field is presented to type in the
+                    user's gender identity-->
+                    <div class="input-box" id="otherGenderInput" style="display: none;">
+                        <!--Prompt the user to add their gender identity-->
+                        <span class="details">Type the gender</span>
+                        <!--Button to read out the question prompt-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <!--input field to add the gender identity-->
+                        <input type="text" id="otherGender" placeholder="Enter your gender">
+                        <!--the button to read out the typed in gender identity-->
+                        <button type="button" onclick="speakGenderInput()"></button>
+                        <span>
 
-                <div class="input-box">
-                    <span class="details">Date of Birth</span>
-                    <input type="date" placeholder="Enter your Date of Birth">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
-                <div class="input-box">
-                    <span class="details">Email</span>
-                    <input type="email" placeholder="Enter your email">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
-                
-                <div class="input-box">
-                    <span class="details">Contact number</span>
-                    <input type="number" placeholder="Enter your contact number">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
-                
-
-                <div class="input-box">
-                    <span class="details">Gender</span>
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <select id="gender" onchange="showGenderInput()">
-                        <option value="" disabled selected>Your gender</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
-                        <option value="other">Other</option>
-                        <option value="prefer-not-to-say">Prefer not to say</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                    <button type="button" onclick="speakSelectedOption(this)"></button>
-                </div>
-                <div class="input-box" id="otherGenderInput" style="display: none;">
-                    <span class="details">Type the gender</span>
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <input type="text" id="otherGender" placeholder="Enter your gender">
-                    <button type="button" onclick="speakGenderInput()"></button>
-                    <span>
-                        
-                </div>
+                    </div>
                 </div>
                 <br>
-                
-                    
+
+
+                <!--div container that contains the title for the burial information-->
                 <div class="title">Burial Information</div>
+                <!--div class that contains the burial information questions-->
                 <div class="user-details">
-                <div class="input-box">
-                    <span class="details">Significant Achievements</span>
-                    <input type="text" placeholder="Significant Achievements">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
-                <div class="input-box">
-                    <span class="details">Grave Inscription</span>
-                    <input type="text" placeholder="Grave Inscription">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <button type="button" onclick="speakInput(this)"></button>
-                </div>
-                <div class="input-box">
-                    <span class="details">Select a burial method</span>
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <select id="burial-method" onchange="speakOption(this)">
-                        <option value="" disabled selected>Burial methods</option>
-                        <option value="Green-burial">Green burial</option>
-                        <option value="Mushroom-burial-suit">Mushroom Burial Suit</option>
-                        <option value="Burial-pod">Natural Burial Pods</option>
-                        <option value="Sea-burial">Sea Burial</option>
-                        <option value="Woodland burial">Woodland Burial</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                    <button type="button" onclick="speakSelectedOption(this)"></button>
-                </div>
-                <div class="input-box">
-                    <span class="details">Pick a grave marker</span>
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <select id="grave-marker" onchange="speakOption(this)">
-                        <option value="" disabled selected>Grave markers</option>
-                        <option value="Tree">Tree</option>
-                        <option value="Rock">Rock</option>
-                        <option value="Flower Bed">Flower Bed</option>
-                        <option value="Bench">Bench</option>
-                        <option value="GPS">GPS coordinates</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                    <button type="button" onclick="speakSelectedOption(this)"></button>
-                </div>
-            </div>
 
-            <div class="button">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
+                    <div class="input-box">
+                        <!--Adding the significant achievements field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <span class="details">Significant Achievements</span>
+                        <!--text field for the significant achievements input-->
+                        <input type="text" placeholder="Significant Achievements">
+                        <!--buttons to read out the question prompt  and what has been typed into the input field-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <button type="button" onclick="speakInput(this)"></button>
+                    </div>
+                    <div class="input-box">
+                        <!--Adding the grave inscription field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <!--title for the field-->
+                        <span class="details">Grave Inscription</span>
+                        <!--input text field for the desired grave inscription-->
+                        <input type="text" placeholder="Grave Inscription">
+                        <!--buttons to read out the question prompt  and what has been typed into the input field-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <button type="button" onclick="speakInput(this)"></button>
+                    </div>
+                    <div class="input-box">
+                        <!--Adding the burial method field, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <!--Question for the burial method-->
+                        <span class="details">Select a burial method</span>
+                        <!--button that speaks the question prompt-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <!--drop down menu for the natural burial options available-->
+                        <select id="burial-method" onchange="speakOption(this)">
+                            <option value="" disabled selected>Burial methods</option>
+                            <option value="Green-burial">Green burial</option>
+                            <option value="Mushroom-burial-suit">Mushroom Burial Suit</option>
+                            <option value="Burial-pod">Natural Burial Pods</option>
+                            <option value="Sea-burial">Sea Burial</option>
+                            <option value="Woodland burial">Woodland Burial</option>
+                        </select>
+                        <!--button that reads the chosen burial method out aloud-->
+                        <button type="button" onclick="speakSelectedOption(this)"></button>
+                    </div>
+                    <div class="input-box">
+                        <!--Adding the grave marker options, also contains the buttons to read the 
+                        title and the data typed in the input field-->
+                        <!--Question for the field-->
+                        <span class="details">Pick a grave marker</span>
+                        <!--button to read the question field-->
+                        <button type="button" onclick="speakQuestion(this)"></button>
+                        <!--drop down menu for the available marker options to choose from-->
+                        <select id="grave-marker" onchange="speakOption(this)">
+                            <option value="" disabled selected>Grave markers</option>
+                            <option value="Tree">Tree</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Flower Bed">Flower Bed</option>
+                            <option value="Bench">Bench</option>
+                            <option value="GPS">GPS coordinates</option>
+                        </select>
+                        <!--button to read out the chosen marker option-->
+                        <button type="button" onclick="speakSelectedOption(this)"></button>
+                    </div>
+                </div>
+                <!--div class that contains the button to submit all user inputs-->
+                <div class="button">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
 
-    </div>
+        </div>
 
 
 
