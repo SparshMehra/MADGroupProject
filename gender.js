@@ -2,7 +2,7 @@
  * added this script so other gender can be entered if "other" is selected
  * otherwise, the input sent will be the same as the selected
  * 
- * @Author: Mohammad Zaid Khan
+ * @Author(s): Mohammad Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
  */
 document.getElementById('gender').addEventListener('change', function () {
     const otherGenderInput = document.getElementById('otherGender');
