@@ -12,10 +12,12 @@ public class FormData {
     private Long id;
     private String fullName;
     private String DOB; // date of birth
-    private String DOP; //date of passing
-    private String relationshipStatus; // relationship status?? idk why this is added
+    private String email;
+    private String contact;
     private String achievements; // TODO: make it an array once they add the feature
-    private String graveOption;
+    private String graveMarker;
+    private String inscription;
+    private String burialMethod;
     private String gender;
 
     // getters and setters used by the controller to get and set the data
@@ -43,20 +45,20 @@ public class FormData {
         this.DOB = DOB;
     }
 
-    public String getDOP() {
-        return DOP;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDOP(String DOP) {
-        this.DOP = DOP;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getRelationshipStatus() {
-        return relationshipStatus;
+    public String getContact() {
+        return contact;
     }
 
-    public void setRelationshipStatus(String relationshipStatus) {
-        this.relationshipStatus = relationshipStatus;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getAchievements() {
@@ -67,12 +69,28 @@ public class FormData {
         this.achievements = achievements;
     }
 
-    public String getGraveOption() {
-        return graveOption;
+    public String getgraveMarker() {
+        return graveMarker;
     }
 
-    public void setGraveOption(String graveOption) {
-        this.graveOption = graveOption;
+    public void setgraveMarker(String graveMarker) {
+        this.graveMarker = graveMarker;
+    }
+
+    public String getInscription() {
+        return inscription;
+    }
+
+    public void setInscription(String inscription) {
+        this.inscription = inscription;
+    }
+
+    public String getBurialMethod() {
+        return burialMethod;
+    }
+
+    public void setBurialMethod(String burialMethod) {
+        this.burialMethod = burialMethod;
     }
 
     public String getGender() {
@@ -87,13 +105,15 @@ public class FormData {
     public String toString() {
         return "FormData{" +
                 "id=" + id +
-                ", fullName='" + fullName + '\'' +
-                ", DOB='" + DOB + '\'' +
-                ", DOP='" + DOP + '\'' +
-                ", relationshipStatus='" + relationshipStatus + '\'' +
-                ", achievements='" + achievements + '\'' +
-                ", graveOption='" + graveOption + '\'' +
-                ", gender='" + gender + '\'' +
+                ", fullName='" + fullName + "'\n" +
+                ", DOB='" + DOB + "'\n" +
+                ", email='" + email + "'\n" +
+                ", contact='" + contact + "'\n" +
+                ", achievements='" + achievements + "'\n" +
+                ", graveMarker='" + graveMarker + "'\n" +
+                ", inscription='" + inscription + "'\n" +
+                ", burialMethod='" + burialMethod + "'\n" +
+                ", gender='" + gender + "'\n" +
                 '}';
     }
 }
