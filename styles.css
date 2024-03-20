@@ -1,16 +1,41 @@
+/* FILE HEADER
+Purpose: This CSS file provides styling for the container. It defines the layout and appearance 
+of form elements and buttons within a flex container, as well as the presentation of output text.
+*/
+
+/* Styles for the background*/
 body{
-    background-image: url('pexels-fabian-reitmeier-707915.jpg');
+    background-image: url(3.jpg);
+    background-repeat: no-repeat;/*to stop the background from repeating*/
+    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
-    /* Prevent the image from repeating */
-    background-repeat: no-repeat; 
-    background-position: top; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+
 }
+/*Styles for the contents in the paragraph*/
+.content{
+    font-family: italic;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(11, 47, 31);
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+}
+/* Styles for buttons */
 .buttons{
-    color-scheme:  dark light;
-    padding: 20px;  
-    border-radius: 8px;
+    color-scheme: dark light;
+    font-size: 35px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: bisque;
+    position: absolute;
+    top:50%;
+    left:50%;
+    
+    transform: translateX(-50%) translateY(-50%); /*repositions an element in the horizontal and/or 
+                                                    vertical direction*/
+
 }
