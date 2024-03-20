@@ -6,6 +6,10 @@
 
 use whatever method, just get it installed, heres a link to [download](https://dev.mysql.com/downloads/mysql/) page.
 
+### Install Maven package
+
+install maven, use this [guide](https://www.baeldung.com/install-maven-on-windows-linux-mac) to install it.
+
 ### Log in to MySQL
 
 After installing, open command prompt and login to MySQL
@@ -52,6 +56,13 @@ The databse (SQL) is a service, so its constantly running so no start needed jsu
 ### Server Endpoint
 
 Go to the root directory of the project after cloning it and run the following
+
+Build the jar
+```
+./mvnw clean package
+```
+
+Run the jar
 ```
 java -jar target/MADBackEnd-0.0.1-SNAPSHOT.jar
 ```
