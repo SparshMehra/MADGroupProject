@@ -31,7 +31,7 @@
             <!--Title for the personal information section-->
             <div class="title">Personal Information</div>
             <!--***-->
-            <form action="#">
+            <form action="http://localhost:8080/submit" method="post"> <!-- DONT CHANGE THIS ACTION, ZAID -->
                 <!--div for storing the user information -->
                 <div class="user-details">
                     <!--div for the name question-->
@@ -40,7 +40,7 @@
                         title and the data typed in the input field-->
                         <span class="details">Full Name</span>
                         <!--Input text field for the name-->
-                        <input type="text" placeholder="Enter your Full Name">
+                        <input type="text" placeholder="Enter your Full Name" name="fullName"> <!-- DONT CHANGE THIS NAME - ZAID -->
                         <!--Buttons to speak the field contents as well as the questions-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
@@ -51,7 +51,7 @@
                         title and the data typed in the input field-->
                         <span class="details">Date of Birth</span>
                         <!--Input "date" field-->
-                        <input type="date" placeholder="Enter your Date of Birth">
+                        <input type="date" placeholder="Enter your Date of Birth" name="DOB"> <!-- DONT CHANGE THIS NAME - ZAID -->
                         <!--Accessibility buttons to read the question and the input out aloud-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
@@ -62,7 +62,7 @@
                         title and the data typed in the input field-->
                         <span class="details">Email</span>
                         <!--input field for the email-->
-                        <input type="email" placeholder="Enter your email">
+                        <input type="email" placeholder="Enter your email" name="email"> <!-- DONT CHANGE THIS NAME - ZAID -->
                         <!--accessibility buttons to read out the question and the input-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
@@ -73,7 +73,7 @@
                         title and the data typed in the input field-->
                         <span class="details">Contact number</span>
                         <!--input field for the contact number-->
-                        <input type="number" placeholder="Enter your contact number">
+                        <input type="number" placeholder="Enter your contact number" name="contact"> <!-- DONT CHANGE THIS NAME - ZAID -->
                         <!--buttons for accessibility: reading out the question and the input-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
@@ -86,7 +86,7 @@
                         <!--button to read out the question for the gender-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <!--drop down select box with options for male, female, prefer not to say or other-->
-                        <select id="gender" onchange="showGenderInput()">
+                        <select id="gender" onchange="showGenderInput()" name="gender"> <!-- DONT CHANGE THIS NAME - ZAID -->
                             <option value="" disabled selected>Your gender</option>
                             <option value="female">Female</option>
                             <option value="male">Male</option>
@@ -98,17 +98,15 @@
                     </div>
                     <!--if the user chooses the other option for the gender, a new input field is presented to type in the
                     user's gender identity-->
-                    <div class="input-box" id="otherGenderInput" style="display: none;">
+                    <div class="input-box" id="otherGenderInput" style="display: none;" >
                         <!--Prompt the user to add their gender identity-->
                         <span class="details">Type the gender</span>
                         <!--Button to read out the question prompt-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <!--input field to add the gender identity-->
-                        <input type="text" id="otherGender" placeholder="Enter your gender">
+                        <input type="text" id="otherGender" placeholder="Enter your gender" name="gender">
                         <!--the button to read out the typed in gender identity-->
                         <button type="button" onclick="speakGenderInput()"></button>
-                        <span>
-
                     </div>
                 </div>
                 <br>
@@ -124,7 +122,7 @@
                         title and the data typed in the input field-->
                         <span class="details">Significant Achievements</span>
                         <!--text field for the significant achievements input-->
-                        <input type="text" placeholder="Significant Achievements">
+                        <input type="text" placeholder="Significant Achievements" name="achievements"> <!-- DONT CHANGE THIS NAME - ZAID -->
                         <!--buttons to read out the question prompt  and what has been typed into the input field-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
@@ -135,7 +133,7 @@
                         <!--title for the field-->
                         <span class="details">Grave Inscription</span>
                         <!--input text field for the desired grave inscription-->
-                        <input type="text" placeholder="Grave Inscription">
+                        <input type="text" placeholder="Grave Inscription" name="inscription"> <!-- DONT CHANGE THIS NAME - ZAID -->
                         <!--buttons to read out the question prompt  and what has been typed into the input field-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
@@ -148,7 +146,7 @@
                         <!--button that speaks the question prompt-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <!--drop down menu for the natural burial options available-->
-                        <select id="burial-method" onchange="speakOption(this)">
+                        <select id="burial-method" onchange="speakOption(this)" name="burialMethod"> <!-- DONT CHANGE THIS NAME - ZAID -->
                             <option value="" disabled selected>Burial methods</option>
                             <option value="Green-burial">Green burial</option>
                             <option value="Mushroom-burial-suit">Mushroom Burial Suit</option>
@@ -167,7 +165,7 @@
                         <!--button to read the question field-->
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <!--drop down menu for the available marker options to choose from-->
-                        <select id="grave-marker" onchange="speakOption(this)">
+                        <select id="grave-marker" onchange="speakOption(this)" name="graveMarker"> <!-- DONT CHANGE THIS NAME - ZAID -->
                             <option value="" disabled selected>Grave markers</option>
                             <option value="Tree">Tree</option>
                             <option value="Rock">Rock</option>
@@ -186,7 +184,6 @@
             </form>
 
         </div>
-
-
-
+    </div>
+<script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
 </body>
