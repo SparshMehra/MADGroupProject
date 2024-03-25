@@ -1,6 +1,6 @@
 /*
     This file contains the styles for a responsive webform for natural burial 
-    initiative created for people with accessbility needs.
+    initiative created for people with accessibility needs.
     Author(s): Mohammed Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 */
 
@@ -12,24 +12,22 @@
     font-size: 105%; /* Increase font size by 5% */
 }
 
-
 body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    
 }
 
 .container {
     max-width: 700px;
     width: 100%;
     background-image: transparent;
-    padding: 25px 30px;
+    padding: 100% 30px 50px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding-top: 200px; /* Add padding to the top */
+    padding-top: 480px; /* Add padding to the top */
 }
 
 .container .title {
@@ -43,14 +41,17 @@ body {
 }
 
 .user-details .input-box {
-    width: calc(50% - 30px);
-    margin: 15px; /* Adjusted margin */
+    width: 100%; /* Adjusted width */
+    margin: 15px auto; /* Adjusted margin */
     position: relative;
 }
 
-.user-details .input-box input {
+.user-details .input-box input,
+.user-details .input-box select {
+    width: 100%; /* Adjusted width */
     height: 49.5px; /* Adjusted height */
-    width: calc(100% - 50px);
+    margin-right: auto; /* Center the input fields */
+    margin-left: auto; /* Center the input fields */
     border-radius: 5px;
     border: 1px solid #ccc;
     padding-left: 15px;
@@ -87,13 +88,6 @@ body {
 }
 
 .user-details .input-box select {
-    height: 49.5px; /* Adjusted height */
-    width: calc(100% - 50px);
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 1.05em; /* Adjusted font size */
-    transition: all 0.3s ease;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -119,7 +113,6 @@ body {
 form .gender-details .gender-title {
     font-size: 21px; /* Adjusted font size */
     font-weight: 500;
-    
 }
 
 form .gender-details .category {
@@ -152,6 +145,7 @@ form .button input {
     height: 100%;
     width: 100%;
 }
+
 .light-mode {
     background-color: #ffffff;
     color: #000000;
