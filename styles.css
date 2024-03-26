@@ -1,7 +1,4 @@
-/* FILE HEADER
-Purpose: This CSS file provides styling for the container. It defines the layout and appearance 
-of form elements and buttons within a flex container, as well as the presentation of output text.
-*/
+/* FILE HEADER Purpose: This CSS file provides styling for the container. It defines the layout and appearance of form elements and buttons within a flex container, as well as the presentation of output text. */
 
 /* Styles for the background */
 body {
@@ -18,11 +15,10 @@ body {
 .top-strip {
     position: relative;
     height: 10vh;
-    background-color: rgba(53, 68, 60, 0.7);
+    background-color: rgba(0, 0, 0, 0.6); 
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 .top-strip h1 {
@@ -43,25 +39,28 @@ body {
     border-color: white;
 }
 
+/* Styles for the content container */
+.content-container {
+    text-align: center;
+}
+
 /* Styles for the content */
 .content {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2); /* Background color with opacity */
+    padding: 10px; /* Adjust padding as needed */
     font-family: 'Trebuchet MS', sans-serif;
     font-style: bold;
-    margin-top: 60vh;
-    text-align: center;
     font-size: 2.6rem;
-    margin-top: 230px;
     color: rgb(255, 255, 255);
-
-
+    margin-top: 230px;
 }
 
 /* Styles for buttons */
 .buttons {
     color-scheme: dark light;
-
     font-size: 35px;
     padding: 20px 40px;
     border-radius: 25px;
-    background-color: rgb(53, 68, 60, 0.8);
+    background-color: rgba(0, 0, 0, 0.6); 
 }
