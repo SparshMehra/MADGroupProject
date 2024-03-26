@@ -3,39 +3,65 @@ Purpose: This CSS file provides styling for the container. It defines the layout
 of form elements and buttons within a flex container, as well as the presentation of output text.
 */
 
-/* Styles for the background*/
-body{
+/* Styles for the background */
+body {
+    position: relative;
     background-image: url(3.jpg);
-    background-repeat: no-repeat;/*to stop the background from repeating*/
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-
+    margin: 0;
 }
-/*Styles for the contents in the paragraph*/
-.content{
-    font-family: italic;
-    font-size: 2rem;
-    font-weight: 400;
+
+/* Styles for the top strip */
+.top-strip {
+    position: relative;
+    height: 10vh;
+    background-color: rgba(53, 68, 60, 0.7);
+    padding: 10px 0;
     text-align: center;
-    color: rgb(11, 47, 31);
-    position: absolute;
-    top: 30%;
-    left: 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
-/* Styles for buttons */
-.buttons{
-    color-scheme: dark light;
-    font-size: 35px;
-    padding: 30px;
-    border-radius: 25px;
-    background-color: bisque;
-    position: absolute;
-    top:50%;
-    left:50%;
-    
-    transform: translateX(-50%) translateY(-50%); /*repositions an element in the horizontal and/or 
-                                                    vertical direction*/
 
+.top-strip h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+.in-button {
+    display: flex;
+    margin-top: -6.5vh;
+    margin-left: 140vh;
+    color-scheme: dark light;
+    font-size: 22px;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-color: white;
+}
+
+/* Styles for the content */
+.content {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    margin-top: 60vh;
+    text-align: center;
+    font-size: 2.6rem;
+    margin-top: 230px;
+    color: rgb(255, 255, 255);
+
+
+}
+
+/* Styles for buttons */
+.buttons {
+    color-scheme: dark light;
+
+    font-size: 35px;
+    padding: 20px 40px;
+    border-radius: 25px;
+    background-color: rgb(53, 68, 60, 0.8);
 }
