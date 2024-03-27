@@ -72,20 +72,6 @@ body {
     cursor: pointer;
 }
 
-/* Style for the button before gender options */
-.gender-details button {
-    position: absolute;
-    top: 50%;
-    left: -55px;
-    transform: translateY(-50%);
-    height: 33px; /* Adjusted height */
-    width: 88px; /* Adjusted width */
-    border: none;
-    background-color: #1ab1bf;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
 
 .user-details .input-box select {
     -webkit-appearance: none;
@@ -108,32 +94,6 @@ body {
 .user-details .input-box button:last-of-type {
     left: -35px;
     top: 37.5px; /* Adjusted top position */
-}
-
-form .gender-details .gender-title {
-    font-size: 21px; /* Adjusted font size */
-    font-weight: 500;
-}
-
-form .gender-details .category {
-    display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
-}
-
-.gender-details .category label {
-    display: flex;
-    align-items: center;
-}
-
-.gender-details .category .dot {
-    height: 19.8px; /* Adjusted height */
-    width: 19.8px; /* Adjusted width */
-    background: #d9d9d9;
-    border-radius: 50%;
-    margin-right: 9.9px; /* Adjusted margin */
-    border: 5.5px solid transparent; /* Adjusted border width */
 }
 
 form .button {
@@ -188,4 +148,46 @@ form .button input {
 /* Darken button background color on hover */
 .dark-mode input[type="submit"]:hover {
     background-color: #1c1c1c;
+}
+
+/* for radio buttons @author Mohammad Zaid Khan*/
+.radio-group {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+}
+
+.radio-group label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.radio-group input[type="radio"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #1ab1bf;
+    transform: translateY(-50%);
 }
