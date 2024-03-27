@@ -30,7 +30,7 @@ function speakQuestion(button) {
 }
 
 function speakOption(select) {
-    var selectedOption = select.options[select.selectedIndex].text;
+    var selectedOption = select.value;
     speak(selectedOption);
 }
 
@@ -44,21 +44,17 @@ function speakSelectedOption(button) {
     }
 }
 
+
 function speakGender(input) {
-    var gender = input.value;
+    var gender = input.id;
     speak(gender);
-    if (gender !== "Other") {
-        document.getElementById('otherGenderInput').style.display = 'none';
-    }
 }
 
-function showGenderInput() {
-    var genderSelect = document.getElementById('gender');
-    var selectedGender = genderSelect.options[genderSelect.selectedIndex].value;
-    if (selectedGender === "other") {
-        document.getElementById('otherGenderInput').style.display = 'block';
-    } else {
+function showGenderInput(element) {
+    if (element.value !== 'other') {
         document.getElementById('otherGenderInput').style.display = 'none';
+    } else {
+        document.getElementById('otherGenderInput').style.display = 'block';
     }
 }
 
@@ -83,3 +79,4 @@ function speak(text) {
                 const body = document.body;
                 body.classList.toggle('dark-mode');
             }
+

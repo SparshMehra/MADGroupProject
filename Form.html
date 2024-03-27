@@ -15,7 +15,6 @@
     <!--Linking the tailwind styles-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!--Adding the javascript file (contains the functionality for the accesibility  features)-->
-    <script src="audio.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <!-- Initially set to light mode -->
@@ -80,21 +79,22 @@
                     </div>
                     <!--div for the gender field-->
                     <div class="input-box">
-                        <!--Adding the gender field and the the title for the field, also contains the buttons to read the 
-                        title and the data typed in the input field-->
-                        <span class="details">Gender</span>
-                        <!--button to read out the question for the gender-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <!--drop down select box with options for male, female, prefer not to say or other-->
-                        <select id="gender" onchange="showGenderInput()" name="gender"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                            <option value="" disabled selected>Your gender</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="other">Other</option>
-                            <option value="prefer-not-to-say">Prefer not to say</option>
-                        </select>
-                        <!--button to read out the selevcted gender option-->
-                        <button type="button" onclick="speakSelectedOption(this)"></button>
+                        <div class="radio-group">
+                            <input type="radio" id="Male" name="gender" value="male" onchange="showGenderInput(this)" onclick="speakGender(this)">
+                            <label for="Male">Male</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="Female" name="gender" value="female" onchange="showGenderInput(this)" onclick="speakGender(this)">
+                            <label for="Female">Female</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="Other" name="gender" value="other" onchange="showGenderInput(this)" onclick="speakGender(this)">
+                            <label for="Other">Other</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="PreferNotToSay" name="gender" value="prefer-not-to-say" onchange="showGenderInput(this)" onclick="speakGender(this)">
+                            <label for="PreferNotToSay">Prefer not to say</label>
+                        </div>
                     </div>
                     <!--if the user chooses the other option for the gender, a new input field is presented to type in the
                     user's gender identity-->
@@ -138,44 +138,57 @@
                         <button type="button" onclick="speakQuestion(this)"></button>
                         <button type="button" onclick="speakInput(this)"></button>
                     </div>
+                    <!-- Burial Method as radio buttons -->
                     <div class="input-box">
-                        <!--Adding the burial method field, also contains the buttons to read the 
-                        title and the data typed in the input field-->
-                        <!--Question for the burial method-->
                         <span class="details">Select a burial method</span>
-                        <!--button that speaks the question prompt-->
                         <button type="button" onclick="speakQuestion(this)"></button>
-                        <!--drop down menu for the natural burial options available-->
-                        <select id="burial-method" onchange="speakOption(this)" name="burialMethod"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                            <option value="" disabled selected>Burial methods</option>
-                            <option value="Green-burial">Green burial</option>
-                            <option value="Mushroom-burial-suit">Mushroom Burial Suit</option>
-                            <option value="Burial-pod">Natural Burial Pods</option>
-                            <option value="Sea-burial">Sea Burial</option>
-                            <option value="Woodland burial">Woodland Burial</option>
-                        </select>
-                        <!--button that reads the chosen burial method out aloud-->
-                        <button type="button" onclick="speakSelectedOption(this)"></button>
+                        <div class="radio-group">
+                            <input type="radio" id="green-burial" name="burialMethod" value="Green-burial" onclick="speakOption(this)">
+                            <label for="green-burial">Green burial</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="mushroom-burial-suit" name="burialMethod" value="Mushroom-burial-suit" onclick="speakOption(this)">
+                            <label for="mushroom-burial-suit">Mushroom Burial Suit</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="burial-pod" name="burialMethod" value="Burial-pod" onclick="speakOption(this)">
+                            <label for="burial-pod">Natural Burial Pods</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial" onclick="speakOption(this)">
+                            <label for="sea-burial">Sea Burial</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial" onclick="speakOption(this)">
+                            <label for="woodland-burial">Woodland Burial</label>
+                        </div>
                     </div>
+                    <!-- Grave Marker as radio buttons -->
                     <div class="input-box">
-                        <!--Adding the grave marker options, also contains the buttons to read the 
-                        title and the data typed in the input field-->
-                        <!--Question for the field-->
                         <span class="details">Pick a grave marker</span>
-                        <!--button to read the question field-->
                         <button type="button" onclick="speakQuestion(this)"></button>
-                        <!--drop down menu for the available marker options to choose from-->
-                        <select id="grave-marker" onchange="speakOption(this)" name="graveMarker"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                            <option value="" disabled selected>Grave markers</option>
-                            <option value="Tree">Tree</option>
-                            <option value="Rock">Rock</option>
-                            <option value="Flower Bed">Flower Bed</option>
-                            <option value="Bench">Bench</option>
-                            <option value="GPS">GPS coordinates</option>
-                        </select>
-                        <!--button to read out the chosen marker option-->
-                        <button type="button" onclick="speakSelectedOption(this)"></button>
+                        <div class="radio-group">
+                            <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
+                            <label for="tree">Tree</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="rock" name="graveMarker" value="Rock" onclick="speakOption(this)">
+                            <label for="rock">Rock</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed" onclick="speakOption(this)">
+                            <label for="flower-bed">Flower Bed</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
+                            <label for="bench">Bench</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
+                            <label for="gps">GPS coordinates</label>
+                        </div>
                     </div>
+
                 </div>
                 <!--div class that contains the button to submit all user inputs-->
                 <div class="button">
@@ -187,4 +200,5 @@
     </div>
 <script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
 <script src="saveInfo.js"></script>
+<script src="audio.js"></script>
 </body>
