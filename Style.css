@@ -34,20 +34,29 @@ body {
     font-size: 42px; /* Adjusted font size */
     font-weight: 500;
 }
-
+.title{
+    display: flex;
+    justify-content: center;
+}
 .container .user-details {
     display: flex;
     flex-wrap: wrap;
+}
+.user-details .input-box span.details {
+    flex: 1; /* Add this line */
 }
 
 .user-details .input-box {
     width: 100%; /* Adjusted width */
     margin: 15px auto; /* Adjusted margin */
     position: relative;
+    display: flex; /* Add this line */
+    align-items: center;
 }
 
 .user-details .input-box input,
 .user-details .input-box select {
+    flex: 2;
     width: 100%; /* Adjusted width */
     height: 49.5px; /* Adjusted height */
     margin-right: auto; /* Center the input fields */
@@ -61,13 +70,12 @@ body {
 }
 
 .user-details .input-box button {
-    position: absolute;
-    top: 0;
-    height: 27.5px; /* Adjusted height */
-    width: 27.5px; /* Adjusted width */
+
+    height: 50px;
+    width: 50px;
     border: none;
     background-color: #1ab1bf;
-    border-radius: 50px;
+    border-radius: 20px;
     color: #fff;
     cursor: pointer;
 }
@@ -87,7 +95,7 @@ body {
 }
 
 .user-details .input-box button:first-of-type {
-    left: -35px;
+    left: 37.5px;
     top: 0;
 }
 
@@ -153,6 +161,7 @@ form .button input {
 /* for radio buttons @author Mohammad Zaid Khan*/
 .radio-group {
     display: inline-block;
+    width:220px; /* Adjust the width to your preference */
     margin-right: 20px;
 }
 

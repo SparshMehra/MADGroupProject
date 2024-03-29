@@ -23,182 +23,234 @@
     <!-- Centering the container -->
     <div class="container flex justify-center items-center h-screen relative">
         <!-- Dark mode toggle button -->
-        <button id="darkModeToggle" onclick="toggleDarkMode()" class="absolute top-0 right-0 m-4">Dark Mode</button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()" class="absolute top-0 left-0 m-4">Dark Mode</button>
 
         <!--The actual form starts from here, it contains the personal and burial information sections-->
-        <div class="container">
-            <!--Title for the personal information section-->
-            <div class="title">Personal Information</div>
-            <!--*Button for submission-->
-            <form action="http://localhost:8080/submit" method="post"> <!-- DONT CHANGE THIS ACTION - ZAID -->
-                <!--div for storing the user information -->
-                <div class="user-details">
-                    <!--div for the name question-->
-                    <div class="input-box">
-                        <!--Adding the name field and the the title for the field, also contains the buttons to read the 
+
+        <!--Title for the personal information section-->
+        <div class="title">Personal Information</div>
+        <!--*Button for submission-->
+        <form action="http://localhost:8080/submit" method="post"> <!-- DONT CHANGE THIS ACTION - ZAID -->
+            <!--div for storing the user information -->
+            <div class="user-details">
+                <!--div for the name question-->
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <!--Adding the name field and the the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                        <span class="details">Full Name</span>
-                        <!--Input text field for the name-->
-                        <input type="text" placeholder="Enter your Full Name" name="fullName"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                        <!--Buttons to speak the field contents as well as the questions-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <button type="button" onclick="speakInput(this)"></button>
-                    </div>
-                    <!--div for the date of birth question-->
-                    <div class="input-box">
-                        <!--Adding the date of birth field and the the title for the field, also contains the buttons to read the 
+                    <span class="details">Full Name</span>
+                    <!--Input text field for the name-->
+                    <input type="text" placeholder="Enter your Full Name" name="fullName">
+                    <!-- DONT CHANGE THIS NAME - ZAID -->
+                    <!--Buttons to speak the field contents as well as the questions-->
+
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <!--div for the date of birth question-->
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <!--Adding the date of birth field and the the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                        <span class="details">Date of Birth</span>
-                        <!--Input "date" field-->
-                        <input type="date" placeholder="Enter your Date of Birth" name="DOB"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                        <!--Accessibility buttons to read the question and the input out aloud-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <button type="button" onclick="speakInput(this)"></button>
-                    </div>
-                    <!--div for the email question-->
-                    <div class="input-box">
-                        <!--Adding the email field and the the title for the field, also contains the buttons to read the 
+                    <span class="details">Date of Birth</span>
+                    <!--Input "date" field-->
+                    <input type="date" placeholder="Enter your Date of Birth" name="DOB">
+                    <!-- DONT CHANGE THIS NAME - ZAID -->
+                    <!--Accessibility buttons to read the question and the input out aloud-->
+
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <!--div for the email question-->
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <!--Adding the email field and the the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                        <span class="details">Email</span>
-                        <!--input field for the email-->
-                        <input type="email" placeholder="Enter your email" name="email"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                        <!--accessibility buttons to read out the question and the input-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <button type="button" onclick="speakInput(this)"></button>
-                    </div>
-                    <!--div for the contact number field-->
-                    <div class="input-box">
-                        <!--Adding the contact number field and the the title for the field, also contains the buttons to read the 
+                    <span class="details">Email</span>
+                    <!--input field for the email-->
+                    <input type="email" placeholder="Enter your email" name="email">
+                    <!-- DONT CHANGE THIS NAME - ZAID -->
+                    <!--accessibility buttons to read out the question and the input-->
+
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <!--div for the contact number field-->
+                <div class="input-box">
+                    <!--Adding the contact number field and the the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                        <span class="details">Contact number</span>
-                        <!--input field for the contact number-->
-                        <input type="number" placeholder="Enter your contact number" name="contact"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                        <!--buttons for accessibility: reading out the question and the input-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <button type="button" onclick="speakInput(this)"></button>
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <span class="details">Contact number</span>
+                    <!--input field for the contact number-->
+                    <input type="number" placeholder="Enter your contact number" name="contact">
+                    <!-- DONT CHANGE THIS NAME - ZAID -->
+                    <!--buttons for accessibility: reading out the question and the input-->
+
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <!--div for the gender field-->
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+
+                    <span class="details">Select your Gender:</span>
+                    <div class="radio-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-gender-male" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
+                        </svg>
+                        <input type="radio" id="Male" name="gender" value="male" onchange="showGenderInput(this)"
+                            onclick="speakGender(this)">
+                        <label for="Male">Male</label>
                     </div>
-                    <!--div for the gender field-->
-                    <div class="input-box">
-                        <div class="radio-group">
-                            <input type="radio" id="Male" name="gender" value="male" onchange="showGenderInput(this)" onclick="speakGender(this)">
-                            <label for="Male">Male</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="Female" name="gender" value="female" onchange="showGenderInput(this)" onclick="speakGender(this)">
-                            <label for="Female">Female</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="Other" name="gender" value="other" onchange="showGenderInput(this)" onclick="speakGender(this)">
-                            <label for="Other">Other</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="PreferNotToSay" name="gender" value="prefer-not-to-say" onchange="showGenderInput(this)" onclick="speakGender(this)">
-                            <label for="PreferNotToSay">Prefer not to say</label>
-                        </div>
+                    <div class="radio-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-gender-female" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5" />
+                        </svg>
+                        <input type="radio" id="Female" name="gender" value="female" onchange="showGenderInput(this)"
+                            onclick="speakGender(this)">
+                        <label for="Female">Female</label>
                     </div>
-                    <!--if the user chooses the other option for the gender, a new input field is presented to type in the
+                    <div class="radio-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-gender-ambiguous" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z" />
+                        </svg>
+                        <input type="radio" id="Other" name="gender" value="other" onchange="showGenderInput(this)"
+                            onclick="speakGender(this)">
+                        <label for="Other">Other</label>
+                    </div>
+                    <div class="radio-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-gender-trans" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1.707L3.5 2.793l.646-.647a.5.5 0 1 1 .708.708l-.647.646.822.822A4 4 0 0 1 8 3c1.18 0 2.239.51 2.971 1.322L14.293 1H11.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 0 1-3.05-5.814l-.95-.949-.646.647a.5.5 0 1 1-.708-.708l.647-.646L1 1.707V3.5a.5.5 0 0 1-1 0zm5.49 4.856a3 3 0 1 0 5.02 3.288 3 3 0 0 0-5.02-3.288" />
+                        </svg>
+                        <input type="radio" id="PreferNotToSay" name="gender" value="prefer-not-to-say"
+                            onchange="showGenderInput(this)" onclick="speakGender(this)">
+                        <label for="PreferNotToSay">Prefer not to say</label>
+                    </div>
+                </div>
+                <!--if the user chooses the other option for the gender, a new input field is presented to type in the
                     user's gender identity-->
-                    <div class="input-box" id="otherGenderInput" style="display: none;" >
-                        <!--Prompt the user to add their gender identity-->
-                        <span class="details">Type the gender</span>
-                        <!--Button to read out the question prompt-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <!--input field to add the gender identity-->
-                        <input type="text" id="otherGender" placeholder="Enter your gender" name="gender">
-                        <!--the button to read out the typed in gender identity-->
-                        <button type="button" onclick="speakGenderInput()"></button>
-                    </div>
+
+                <div class="input-box" id="otherGenderInput" style="display: none;">
+                    <button type="button" onclick="speakGenderInput()"></button>
+
+                    <!--Prompt the user to add their gender identity-->
+                    <span class="details">Type the gender</span>
+                    <!--Button to read out the question prompt-->
+
+                    <!--input field to add the gender identity-->
+                    <input type="text" id="otherGender" placeholder="Enter your gender" name="gender">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <!--the button to read out the typed in gender identity-->
+
                 </div>
-                <br>
+            </div>
+            <br>
 
 
-                <!--div container that contains the title for the burial information-->
-                <div class="title">Burial Information</div>
-                <!--div class that contains the burial information questions-->
-                <div class="user-details">
+            <!--div container that contains the title for the burial information-->
+            <div class="title">Burial Information</div>
+            <!--div class that contains the burial information questions-->
+            <div class="user-details">
 
-                    <div class="input-box">
-                        <!--Adding the significant achievements field, also contains the buttons to read the 
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <!--Adding the significant achievements field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                        <span class="details">Significant Achievements</span>
-                        <!--text field for the significant achievements input-->
-                        <input type="text" placeholder="Significant Achievements" name="achievements"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                        <!--buttons to read out the question prompt  and what has been typed into the input field-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <button type="button" onclick="speakInput(this)"></button>
-                    </div>
-                    <div class="input-box">
-                        <!--Adding the grave inscription field, also contains the buttons to read the 
+                    <span class="details">Significant Achievements</span>
+                    <!--text field for the significant achievements input-->
+                    <input type="text" placeholder="Significant Achievements" name="achievements">
+                    <!-- DONT CHANGE THIS NAME - ZAID -->
+                    <!--buttons to read out the question prompt  and what has been typed into the input field-->
+
+                    <button type="button" onclick="speakInput(this)"></button>
+                </div>
+                <div class="input-box">
+                    <!--Adding the grave inscription field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                        <!--title for the field-->
-                        <span class="details">Grave Inscription</span>
-                        <!--input text field for the desired grave inscription-->
-                        <input type="text" placeholder="Grave Inscription" name="inscription"> <!-- DONT CHANGE THIS NAME - ZAID -->
-                        <!--buttons to read out the question prompt  and what has been typed into the input field-->
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <button type="button" onclick="speakInput(this)"></button>
+                    <!--title for the field-->
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <span class="details">Grave Location</span>
+                    <!--input text field for the desired grave inscription-->
+
+                    <div class="radio-group">
+                        <input type="radio" id="Well" name="inscription" value="well" onclick="speakOption(this)">
+                        <label for="Well">Well</label>
                     </div>
-                    <!-- Burial Method as radio buttons -->
-                    <div class="input-box">
-                        <span class="details">Select a burial method</span>
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <div class="radio-group">
-                            <input type="radio" id="green-burial" name="burialMethod" value="Green-burial" onclick="speakOption(this)">
-                            <label for="green-burial">Green burial</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="mushroom-burial-suit" name="burialMethod" value="Mushroom-burial-suit" onclick="speakOption(this)">
-                            <label for="mushroom-burial-suit">Mushroom Burial Suit</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="burial-pod" name="burialMethod" value="Burial-pod" onclick="speakOption(this)">
-                            <label for="burial-pod">Natural Burial Pods</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial" onclick="speakOption(this)">
-                            <label for="sea-burial">Sea Burial</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial" onclick="speakOption(this)">
-                            <label for="woodland-burial">Woodland Burial</label>
-                        </div>
+                    <div class="radio-group">
+                        <input type="radio" id="Birch" name="inscription" value="birch" onclick="speakOption(this)">
+                        <label for="Birch">Birch</label>
                     </div>
-                    <!-- Grave Marker as radio buttons -->
-                    <div class="input-box">
-                        <span class="details">Pick a grave marker</span>
-                        <button type="button" onclick="speakQuestion(this)"></button>
-                        <div class="radio-group">
-                            <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
-                            <label for="tree">Tree</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="rock" name="graveMarker" value="Rock" onclick="speakOption(this)">
-                            <label for="rock">Rock</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed" onclick="speakOption(this)">
-                            <label for="flower-bed">Flower Bed</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
-                            <label for="bench">Bench</label>
-                        </div>
-                        <div class="radio-group">
-                            <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
-                            <label for="gps">GPS coordinates</label>
-                        </div>
+                    <div class="radio-group">
+                        <input type="radio" id="Lookout" name="inscription" value="lookout" onclick="speakOption(this)">
+                        <label for="Lookout">Look Out</label>
+                    </div>
+                </div>
+                <!-- Burial Method as radio buttons -->
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
+                    <span class="details">Select a burial method</span>
+
+                    <div class="radio-group">
+                        <input type="radio" id="green-burial" name="burialMethod" value="Green-burial"
+                            onclick="speakOption(this)">
+                        <label for="green-burial">Green burial</label>
                     </div>
 
+                    <div class="radio-group">
+                        <input type="radio" id="burial-pod" name="burialMethod" value="Burial-pod"
+                            onclick="speakOption(this)">
+                        <label for="burial-pod">Burial Pod</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial"
+                            onclick="speakOption(this)">
+                        <label for="sea-burial">Sea Burial</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial"
+                            onclick="speakOption(this)">
+                        <label for="woodland-burial">Woodland Burial</label>
+                    </div>
                 </div>
-                <!--div class that contains the button to submit all user inputs-->
-                <div class="button">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
+                <!-- Grave Marker as radio buttons -->
+                <div class="input-box">
+                    <button type="button" onclick="speakQuestion(this)"></button>
 
-        </div>
+                    <span class="details">Pick a grave marker</span>
+                    <div class="radio-group">
+                        <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
+                        <label for="tree">Tree</label>
+                    </div>
+
+                    <div class="radio-group">
+                        <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
+                            onclick="speakOption(this)">
+                        <label for="flower-bed">Flower Bed</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
+                        <label for="bench">Bench</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
+                        <label for="gps">GPS coordinates</label>
+                    </div>
+                </div>
+
+            </div>
+            <!--div class that contains the button to submit all user inputs-->
+            <div class="button">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+
     </div>
-<script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
-<script src="saveInfo.js"></script>
-<script src="audio.js"></script>
+    <script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
+    <script src="saveInfo.js"></script>
+    <script src="audio.js"></script>
 </body>
