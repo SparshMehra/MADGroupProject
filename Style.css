@@ -4,20 +4,7 @@
     Author(s): Mohammed Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-size: 105%; /* Increase font size by 5% */
-}
 
-body {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
 
 .container {
     max-width: 700px;
@@ -30,18 +17,8 @@ body {
     padding-top: 740px; /* Add padding to the top */
 }
 
-.container .title {
-    font-size: 42px; /* Adjusted font size */
-    font-weight: 500;
-}
-.title{
-    display: flex;
-    justify-content: center;
-}
-.container .user-details {
-    display: flex;
-    flex-wrap: wrap;
-}
+
+
 .user-details .input-box span.details {
     flex: 2; /* Add this line */
 }
@@ -90,33 +67,9 @@ body {
     background-position: right 10px center;
 }
 
-.user-details .input-box select::-ms-expand {
-    display: none;
-}
-
-.user-details .input-box button:first-of-type {
-    left: 37.5px;
-    top: 0;
-}
-
-.user-details .input-box button:last-of-type {
-    left: -35px;
-    top: 37.5px; /* Adjusted top position */
-}
-
-form .button {
-    height: 49.5px; /* Adjusted height */
-    margin: 49.5px 0; /* Adjusted margin */
-}
-
 form .button input {
     height: 100%;
     width: 100%;
-}
-
-.light-mode {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 /* Dark mode styles */
@@ -125,12 +78,6 @@ form .button input {
     color: #ffffff;
 }
 
-/* Styling for select element in dark mode */
-.dark-mode select {
-    color: #ffffff; /* Text color */
-    background-color: #333333; /* Input background color */
-    border: 1px solid #ffffff; /* Border color */
-}
 
 /* Styling for input field in dark mode */
 .dark-mode input[type="text"],
@@ -175,20 +122,7 @@ form .button input {
     position: relative;
     padding-left: 25px;
 }
-
-.radio-group label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: white;
-    border: 1px solid #ccc;
-}
-
+ 
 .radio-group input[type="radio"]:checked + label:after {
     content: '';
     position: absolute;
@@ -204,10 +138,6 @@ form .button input {
     display: flex;
     justify-content: space-around; /* Adjust as needed */
     margin-bottom: 20px; /* Adjust spacing */
-}
-
-.marker-option {
-    text-align: center;
 }
 
 .marker-option img {

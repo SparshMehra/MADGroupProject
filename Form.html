@@ -28,7 +28,11 @@
         <!--The actual form starts from here, it contains the personal and burial information sections-->
 
         <!--Title for the personal information section-->
-        <div class="title">Personal Information</div>
+        <div class="container">
+            <h1 class="text-2xl font-medium text-center">Personal Information</h1>
+          </div>
+          
+
         <!--*Button for submission-->
         <form action="http://localhost:8080/submit" method="post"> <!-- DONT CHANGE THIS ACTION - ZAID -->
             <!--div for storing the user information -->
@@ -141,7 +145,10 @@
 
 
             <!--div container that contains the title for the burial information-->
-            <div class="title">Burial Information</div>
+            <div class="container">
+                <h1 class="text-2xl font-medium text-center">Burial Information</h1>
+              </div>
+              
             <!--div class that contains the burial information questions-->
             <div class="user-details">
 
@@ -285,5 +292,56 @@
     <script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
     <script src="saveInfo.js"></script>
     <script src="audio.js"></script>
-
+    <div class="m-0 p-0 box-border font-poppins text-base md:text-lg">
+     </div>
+     <div class="flex h-screen justify-center items-center">
+      </div>
+      <div class="container">
+        <div class="user-details flex flex-wrap">
+          <!-- Your user details content here -->
+        </div>
+      </div>
+      <button class="h-12 w-12 bg-blue-500 rounded-full text-white focus:outline-none">
+        <!-- Button content -->
+      </button>
+      <select class="appearance-none bg-transparent bg-no-repeat bg-right bg-center">
+        <!-- Select options -->
+      </select>
+      <div class="input-box relative">
+        <button class="absolute left-9 top-0">
+          <!-- Button content -->
+        </button>
+        <!-- Other elements within .input-box -->
+      </div>
+      <div class="light-mode bg-white text-black">
+        <!-- Content for light mode -->
+      </div>
+      <div class="dark-mode bg-gray-900 text-white">
+        <!-- Content for dark mode -->
+      </div>
+      <select class="dark:bg-gray-800 dark:text-white dark:border-white">
+        <!-- Select options -->
+      </select> 
+      <button type="submit" class="dark:hover:bg-gray-900">
+        <!-- Button content -->
+      </button>
+      <div class="radio-group inline-block w-52 mr-5">
+        <!-- Radio buttons -->
+      </div>
+      <style>
+        .radio-group label::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>   
+           
 </body>
