@@ -85,7 +85,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23424242"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    
     background-repeat: no-repeat;
     background-position: right 10px center;
 }
@@ -224,3 +224,17 @@ form .button input {
     height: auto;
     margin-left: 40px;
 }
+#darkModeToggle {
+    background-color: #170101; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size */
+  }
+  
+  #darkModeToggle:hover {
+    background-color: #555; /* Darker background color on hover */
+  }
+  
