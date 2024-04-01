@@ -27,7 +27,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding-top: 480px; /* Add padding to the top */
+    padding-top: 740px; /* Add padding to the top */
 }
 
 .container .title {
@@ -199,4 +199,28 @@ form .button input {
     border-radius: 50%;
     background: #1ab1bf;
     transform: translateY(-50%);
+}
+.grave-markers {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust spacing */
+}
+
+.marker-option {
+    text-align: center;
+}
+
+.marker-option img {
+    width: 100px; /* Adjust image size as needed */
+    height: auto;
+    margin-left: 40px;
+}
+.burial-option {
+    text-align: center;
+}
+
+.burial-option img {
+    width: 100px; /* Adjust image size as needed */
+    height: auto;
+    margin-left: 40px;
 }
