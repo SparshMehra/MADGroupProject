@@ -43,7 +43,7 @@ body {
     flex-wrap: wrap;
 }
 .user-details .input-box span.details {
-    flex: 1; /* Add this line */
+    flex: 2; /* Add this line */
 }
 
 .user-details .input-box {
