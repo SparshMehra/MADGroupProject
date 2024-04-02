@@ -1,3 +1,8 @@
+/**
+ * Save form data to localStorage
+ *
+ * @author Mohammad Zaid Khan
+ */
 document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.querySelector('form');
 
@@ -15,6 +20,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+/**
+ * Function to Load Json data from local storage, if available
+ * 
+ * @author Mohammad Zaid Khan
+ */
 function loadData() {
     const savedData = localStorage.getItem('formData');
     if (savedData) {
@@ -22,8 +32,16 @@ function loadData() {
         const form = document.querySelector('form');
         for (const key in formObject) {
             if (formObject.hasOwnProperty(key)) {
-                const input = form.querySelector(`[name="${key}"]`);
-                if (input) input.value = formObject[key];
+                const inputs = form.querySelectorAll(`[name="${key}"]`);
+                inputs.forEach(input => {
+                    if (input.type === 'radio') {
+                        if (input.value === formObject[key]) {
+                            input.checked = true;
+                        }
+                    } else {
+                        input.value = formObject[key];
+                    }
+                });
             }
         }
     } else {
