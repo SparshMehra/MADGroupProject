@@ -1,20 +1,18 @@
 /*
     This file contains the styles for a responsive webform for natural burial 
     initiative created for people with accessibility needs.
+    
     Author(s): Mohammed Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 */
-
-
 
 .container {
     max-width: 700px;
     width: 100%;
-    background-image: transparent;
     padding: 100% 30px 50px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding-top: 1950px;
+    padding-top: 2200px;
     /* Add padding to the top */
 }
 
@@ -26,10 +24,8 @@
 
 }
 
-
 .user-details .input-box span.details {
     flex: 2;
-    /* Add this line */
 }
 
 .user-details .input-box {
@@ -81,10 +77,11 @@
     color: #ffffff;
 }
 
-    /* Custom CSS to apply Tailwind Cyan 500 color */
-    .custom-bg-cyan-500 {
-        background-color: #06b6d4; /* Tailwind Cyan 500 color */
-    }
+/* Custom CSS to apply Tailwind Cyan 500 color */
+.custom-bg-cyan-500 {
+    background-color: #06b6d4;
+    /* Tailwind Cyan 500 color */
+}
 
 
 /* Styling for input field in dark mode */
@@ -142,22 +139,20 @@
 
 #darkModeToggle {
     background-color: #1ab1bf;
-    /* Dark background color */
-    color: #fff;
     /* Text color */
-    padding: 10px 20px;
+    color: #fff;
     /* Padding */
+    padding: 10px 20px;
     border: none;
-    /* No border */
-    border-radius: 5px;
     /* Rounded corners */
-    cursor: pointer;
+    border-radius: 5px;
     /* Cursor style */
-    font-size: 16px;
+    cursor: pointer;
     /* Font size */
+    font-size: 16px;
 }
 
 #darkModeToggle:hover {
-    background-color: #0d7e89;
     /* Darker background color on hover */
+    background-color: #0d7e89;
 }
