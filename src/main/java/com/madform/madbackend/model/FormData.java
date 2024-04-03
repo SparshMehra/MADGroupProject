@@ -4,7 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
 
+
+// Entity means that this class is an entity and will be used to create a
+// table in the database
 @Entity
 public class FormData {
     @Id
@@ -12,11 +16,12 @@ public class FormData {
     private Long id;
     private String fullName;
     private String DOB; // date of birth
+    @Email
     private String email;
     private String contact;
     private String achievements; // TODO: make it an array once they add the feature
     private String graveMarker;
-    private String inscription;
+    private String graveLocation;
     private String burialMethod;
     private String gender;
 
@@ -69,20 +74,20 @@ public class FormData {
         this.achievements = achievements;
     }
 
+    public String getgraveLocation() {
+        return graveLocation;
+    }
+
+    public void setgraveLocation(String graveLocation) {
+        this.graveLocation = graveLocation;
+    }
+
     public String getgraveMarker() {
         return graveMarker;
     }
 
     public void setgraveMarker(String graveMarker) {
         this.graveMarker = graveMarker;
-    }
-
-    public String getInscription() {
-        return inscription;
-    }
-
-    public void setInscription(String inscription) {
-        this.inscription = inscription;
     }
 
     public String getBurialMethod() {
@@ -110,8 +115,8 @@ public class FormData {
                 ", email='" + email + "'\n" +
                 ", contact='" + contact + "'\n" +
                 ", achievements='" + achievements + "'\n" +
+                ", graveLocation='" + graveLocation + "'\n" +
                 ", graveMarker='" + graveMarker + "'\n" +
-                ", inscription='" + inscription + "'\n" +
                 ", burialMethod='" + burialMethod + "'\n" +
                 ", gender='" + gender + "'\n" +
                 '}';
