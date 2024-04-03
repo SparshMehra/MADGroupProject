@@ -1,0 +1,69 @@
+/*
+    This file contains the styles for a responsive webform for natural burial 
+    initiative created for people with accessibility needs.
+
+    Author(s): Mohammed Zaid Khan, Nabila Saimoon Bithi, Sparsh Mehra, Tooba Javed
+*/
+
+/* FILE HEADER Purpose: This CSS file provides styling for the container. It defines the layout and appearance of form elements and buttons within a flex container, as well as the presentation of output text. */
+
+/* Styles for the background */
+body {
+    position: relative;
+    /* Set the background image and prevent it from repeating */
+    background-image: url(3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* Remove any default margin */
+    margin: 0;
+}
+
+/* Styles for the top strip */
+/* Define a new utility class for the heading inside the top strip */
+@layer utilities{
+.top-strip {
+    /* Enable content visibility for better performance */
+    content-visibility: auto;
+}
+}
+
+/*styles for the top strip h1 */
+/* Define a new utility class for the heading inside the top strip h1 */
+@layer utilities{
+.top-strip h1 {
+    /* Enable content visibility for better performance */
+    content-visibility: auto; 
+}
+}
+
+
+/* Styles for the content container */
+/* Define a new utility class for the heading inside the content-container */
+@layer utilies{
+.content-container {
+    /* Enable content visibility for better performance */
+    content-visibility: auto;
+}
+}
+
+/* Styles for the content */
+/* Define a new utility class for the heading inside the content */
+@layer utilities{
+.content {
+    /* Enable content visibility for better performance */
+ content-visibility: auto;
+}
+}
+
+/* Styles for buttons */
+/* Define a new utility class for the heading inside the buttons */
+@layer utilities{
+.buttons {
+    /* Enable content visibility for better performance */
+    content-visibility: auto;
+}
+}
+
+

@@ -1,0 +1,59 @@
+<!--This is the frontpage of the interactive webform
+     for natural burial: the form is created to 
+     accommodate our clients' accessibility needs.
+     This page redirects to the actual form page by tghe click of a button
+
+Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural Burial by MAD</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="indexStyles.css" />
+    <!-- Link to Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <!-- Top strip with background color, text center alignment, and shadow -->
+    <div
+      class="top-strip relative h-[12vh] bg-[rgba(0,0,0,0.6)] text-center shadow-[0_2px_4px_rgba(0,0,0,0.1)] px-0 py-2.5;"
+    >
+      <!-- Heading with white text color, font size 2xl, and translation -->
+      <h1 class="top-strip h1 text-2xl text-white translate-y-5 font-sans">
+        NATURAL BURIAL
+      </h1>
+    </div>
+
+    <!-- Container for content -->
+    <div class="content-container text-center">
+      <!-- Content with background color, white text color, font size 2.6rem, sans-serif font, margin top, and padding -->
+      <div
+        class="content inline-block bg-[rgba(0,0,0,0.2)] text-[2.6rem] text-white font-sans mt-[230px] p-2.5;"
+      >
+        "Natural Burial — Returning gently to<br />
+        the land that gave us life."
+      </div>
+      <!--break to seperate button from the text for added accesibility-->
+      <br /><br />
+      <!-- Button with dark and light color scheme, white text color,
+             background color with opacity, padding, and rounded corners -->
+      <button
+        class="buttons dark light text-[60px] text-white bg-[rgba(0,0,0,0.8)] px-8 py-4 rounded-[25px]"
+        onclick="startNewPage()"
+      >
+        Start a New Form
+      </button>
+    </div>
+    <!-- JavaScript function to redirect to form page -->
+    <script>
+      //when the function is called, page is redirected to the webform
+      function startNewPage() {
+        window.location.href = "Form.html";
+      }
+      //end of script
+    </script>
+  </body>
+</html>

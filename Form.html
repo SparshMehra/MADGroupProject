@@ -44,8 +44,8 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
              and burial information sections-->
 
         <!-- Title for the personal information section (styled using only tailwindCSS)-->
-        <h1 class="text-8xl font-medium text-center mt-20 mb-14">Personal Information</h1>
-
+        <h1 class="text-9xl text-center mb-25">Personal Information</h1>
+            <br><br>
         <!-- Connecting the form with the server-->
         <form action="http://localhost:8080/submit" method="post">
             <!-- The following section contains the questions, input fields, and appropriate 
@@ -254,7 +254,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                     <button type="button" class="mt-4" aria-label="Read Burial Method question"
                         onclick="speakQuestion(this)"></button>
                         <!--Question for the burial method-->
-                    <span class="details input-box text-7xl mb-15">Select a burial method:</span>
+                    <span class="details input-box text-7xl mb-15">Select a casket/shroud:</span>
                 </div>
 
                 <br>
@@ -263,38 +263,29 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
                         <!--Adding the image and alt text for user accessibility (alt text is for screen readers
                             and also is hepful in the case the image is not loaded)-->
-                        <img src="sea.png" alt="pod">
+                        <img src="shroud.png" alt="pod">
                         <!--radio button for the sea burial option
                              (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial"
+                        <input type="radio" id="shroud" name="burialMethod" value="Shroud"
                             onclick="speakOption(this)">
+                            <br>
                             <!--label for accessibilty for screen reader for the radio button for sea burial-->
-                        <label for="sea-burial">Sea burial</label>
+                        <label for="shroud">Shroud</label>
                     </div>
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
                         <!--Adding the image and alt text for user accessibility (alt text is for screen readers
                             and also is hepful in the case the image is not loaded)-->
-                        <img src="woodland.png" alt="pod">
+                        <img src="wooden.png" alt="pod">
                          <!--radio button for the woodland burial option
                              (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial"
+                        <input type="radio" id="woodland-casket" name="burialMethod" value="Woodland casket"
                             onclick="speakOption(this)">
                             <!--label for accessibilty for screen reader for the radio button-->
-                        <label for="woodland-burial">Woodland Burial</label>
+                        <label for="woodland-casket">Woodland Casket</label>
                     </div>
                 </div>
                 <br><br>
-                
-                <!--Div for containing the type of caskets for the use to choose from-->
-                <div class="input-box text-5xl mt-20 mb-20">
-                    <!--button to speak the question for the casket selection, using JavaScript function speakQuestion()-->
-                    <button type="button" class="mt-4" aria-label="Read Burial Method question"
-                        onclick="speakQuestion(this)"></button>
-
-                    <span class="details input-box text-7xl mb-10">Select the type of casket:</span>
-                </div>
-                <br>
-                <!--div to align the way the items will be place (rowWise)-->
+                <!--div to align the rest of the items (rowWise)-->
                 <div class="flex flex-row justify-center">
                     <!--Adding the first item-->
                     <div class="radio-group text-5xl text-center ml-20 mr-20">
