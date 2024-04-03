@@ -22,7 +22,7 @@ public class FormData {
     private String achievements; // TODO: make it an array once they add the feature
     private String graveMarker;
     private String graveLocation;
-    private String burialMethod;
+    private String casket;
     private String gender;
 
     // getters and setters used by the controller to get and set the data
@@ -90,12 +90,12 @@ public class FormData {
         this.graveMarker = graveMarker;
     }
 
-    public String getBurialMethod() {
-        return burialMethod;
+    public String getcasket() {
+        return casket;
     }
 
-    public void setBurialMethod(String burialMethod) {
-        this.burialMethod = burialMethod;
+    public void setcasket(String casket) {
+        this.casket = casket;
     }
 
     public String getGender() {
@@ -117,7 +117,7 @@ public class FormData {
                 ", achievements='" + achievements + "'\n" +
                 ", graveLocation='" + graveLocation + "'\n" +
                 ", graveMarker='" + graveMarker + "'\n" +
-                ", burialMethod='" + burialMethod + "'\n" +
+                ", casket='" + casket + "'\n" +
                 ", gender='" + gender + "'\n" +
                 '}';
     }
