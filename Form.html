@@ -125,6 +125,43 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                     <button type="button" class="mb-14 mt-6" aria-label="Speak Contact number input"
                         onclick="speakInput(this)"></button>
                 </div>
+            
+              <!--div for the gender field-->
+              <div  class="input-box mt-20 text-4xl flex items-center">
+                <button type="button" class="mb-8" aria-label="Read Contact number question"
+                onclick="speakQuestion(this)"></button>
+                <span class="details flex-grow mb-14 mt-4 text-7xl w-48 ">Gender:</span>
+            </div>
+            <div class="flex flex-col flex-wrap text-5xl">
+                <!--Added the icons for the genders-->
+                <div class="radio-group mb-8 ml-10">
+                    <input type="radio" id="Male" name="gender" value="male" onchange="showGenderInput(this)"
+                        onclick="speakGender(this)">
+                    <label for="Male">
+                        Male
+                    </label>
+                </div>
+                <div class="radio-group mb-8 ml-10">
+                    <input type="radio" id="Female" name="gender" value="female" onchange="showGenderInput(this)"
+                        onclick="speakGender(this)">
+                    <label for="Female">
+                        Female
+                    </label>
+                </div>
+                <div class="radio-group mb-8 ml-10">
+                    <input type="radio" id="Other" name="gender" value="other" onchange="showGenderInput(this)"
+                        onclick="speakGender(this)">
+                    <label for="Other">
+                        Other
+                    </label>
+                </div>
+                <div class="radio-group mb-8 ml-10">
+                    <input type="radio" id="decline-to-state" name="gender" value="decline-to-state" onchange="showGenderInput(this)"
+                        onclick="speakGender(this)">
+                    <label for="decline-to-state">
+                        Opt Out
+                    </label>
+                </div>
             </div>
 
             <!--Break between the personal information and the burial information section-->
@@ -319,6 +356,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                             (the option speaks its name on click using JS speakOption())-->
                         <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
                             onclick="speakOption(this)">
+                            <br>
                             <!--label for accessibilty for screen reader for the radio button-->
                         <label for="flower-bed">Flower Bed</label>
                     </div>

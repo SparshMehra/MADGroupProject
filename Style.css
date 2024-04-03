@@ -18,7 +18,7 @@ elements of the form */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding-top: 2200px;
+    padding-top: 2400px;
 }
 
 /*Styles for the burial information container*/
@@ -147,9 +147,9 @@ elements of the form */
 
 .radio-group label {
     /*Aligining the labels of the radio buttons*/
-    margin: 0 8px;
+    margin: 0 4px;
     cursor: pointer;
     position: relative;
-    padding-left: 0px;
+    white-space: nowrap; /* Prevent label from wrapping */
 }
 
