@@ -1,10 +1,16 @@
 /*
     This file contains the styles for a responsive webform for natural burial 
     initiative created for people with accessibility needs.
-    
+
     Author(s): Mohammed Zaid Khan, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed
 */
 
+
+
+
+/* Styles for the form container till the burial information section.
+These styles are used in conjunction with tailwind for styling the individual 
+elements of the form */
 .container {
     max-width: 700px;
     width: 100%;
@@ -13,29 +19,26 @@
     display: flex;
     flex-direction: column;
     padding-top: 2200px;
-    /* Add padding to the top */
 }
 
+/*Styles for the burial information container*/
 .newContainer {
     max-width: 2000px;
     border-radius: 5px;
     display: fixed;
-
-
 }
 
+/*Aligining the length of all the input fields*/
 .user-details .input-box span.details {
     flex: 2;
 }
 
+/*Adding space between each question and input field*/
 .user-details .input-box {
-    width: 100%;
-    /* Adjusted width */
+    width: 100%; 
     margin: 15px auto;
-    /* Adjusted margin */
     position: relative;
     display: flex;
-    /* Add this line */
     align-items: center;
 }
 
@@ -59,8 +62,9 @@
     transition: all 0.3s ease;
 }
 
+/*Styles for the buttons for voice*/
 .user-details .input-box button {
-
+   /*adjusting the height and radius*/
     height: 50px;
     width: 50px;
     border: none;
@@ -70,19 +74,20 @@
     cursor: pointer;
 }
 
-
-/* Dark mode styles */
-.dark-mode {
-    background-color: #222222;
-    color: #ffffff;
-}
-
 /* Custom CSS to apply Tailwind Cyan 500 color */
 .custom-bg-cyan-500 {
     background-color: #06b6d4;
     /* Tailwind Cyan 500 color */
 }
 
+
+/*Styles for the dark theme*/
+
+/* Dark mode style */
+.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+}
 
 /* Styling for input field in dark mode */
 .dark-mode input[type="text"],
@@ -99,43 +104,10 @@
     /* Border color */
 }
 
-
 /* Darken button background color on hover */
 .dark-mode input[type="submit"]:hover {
     background-color: #1c1c1c;
 }
-
-/* for radio buttons @author Mohammad Zaid Khan*/
-.radio-group {
-    display: inline-block;
-    width: 300px;
-    /* Adjust the width to your preference */
-    margin-right: 20px;
-}
-
-.radio-group input[type="radio"] {
-    content: '';
-    top: 50%;
-    width: 24px;
-    height: 24px;
-}
-
-.radio-group label {
-    margin: 0 8px;
-    cursor: pointer;
-    position: relative;
-    padding-left: 0px;
-
-}
-
-.grave-markers {
-    display: flex;
-    justify-content: space-around;
-    /* Adjust as needed */
-    margin-bottom: 20px;
-    /* Adjust spacing */
-}
-
 
 #darkModeToggle {
     background-color: #1ab1bf;
@@ -156,3 +128,28 @@
     /* Darker background color on hover */
     background-color: #0d7e89;
 }
+
+/* for radio buttons @author Mohammad Zaid Khan*/
+.radio-group {
+    display: inline-block;
+    width: 300px;
+    /* Adjust the width to your preference */
+    margin-right: 20px;
+}
+
+/**** Radio Button Styles (radio buttons were not appearing correcly using only CSS ****/
+.radio-group input[type="radio"] {
+    content: '';
+    top: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.radio-group label {
+    /*Aligining the labels of the radio buttons*/
+    margin: 0 8px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 0px;
+}
+
