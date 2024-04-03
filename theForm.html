@@ -24,7 +24,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
      NOTE: aria-labels are added for the buttons for which a visible label on the button
      is not present-->
 
-<body class="light-mode" onload="loadData()">
+<body class="light-mode">
 
     <!-- Centering the container using both CSS and tailwindCSS styles-->
     <div class="container flex justify-center items-center h-screen relative">
@@ -210,7 +210,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                 </div>
 
                 <br>
-                <!--$$$Added the radio buttons for the location for the grave instead of the grave inscription-->
+                <!--$$$Added the radio buttons for the location for the grave instead of the grave graveLocation-->
                 <!--Aligning the options into a row-->
                 <div clas="flex flex-row">
                     <!--contains grave location option 1-->
@@ -220,7 +220,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="well.png" alt="well">
                         <!--radio button for the well option
                             (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="Well" name="inscription" value="well" onclick="speakOption(this)">
+                        <input type="radio" id="Well" name="graveLocation" value="well" onclick="speakOption(this)">
                         <!--label for the radio button for well option-->
                         <label for="Well">Well</label>
                     </div>
@@ -231,7 +231,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="birch.png" alt="birch">
                         <!--radio button for the birch location option 
                             (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="Birch" name="inscription" value="birch" onclick="speakOption(this)">
+                        <input type="radio" id="Birch" name="graveLocation" value="birch" onclick="speakOption(this)">
                         <!--label for accessibilty for screen reader for the radio button-->
                         <label for="Birch">Birch</label>
                     </div>
@@ -242,7 +242,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="lookout.png" alt="lookout">
                         <!--radio button for the lookout to the ocean location option
                             (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="Lookout" name="inscription" value="lookout" onclick="speakOption(this)">
+                        <input type="radio" id="Lookout" name="graveLocation" value="lookout" onclick="speakOption(this)">
                         <!--label for accessibilty for screen reader for the radio button-->
                         <label for="Lookout">Look Out</label>
                     </div>
@@ -266,7 +266,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="shroud.png" alt="pod">
                         <!--radio button for the sea burial option
                              (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="shroud" name="burialMethod" value="Shroud"
+                        <input type="radio" id="shroud" name="casket" value="Shroud"
                             onclick="speakOption(this)">
                             <!--label for accessibilty for screen reader for the radio button for sea burial-->
                         <label for="shroud">Shroud</label>
@@ -277,7 +277,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="wooden.png" alt="pod">
                          <!--radio button for the woodland burial option
                              (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="woodland-casket" name="burialMethod" value="Woodland casket"
+                        <input type="radio" id="woodland-casket" name="casket" value="Woodland casket"
                             onclick="speakOption(this)">
                             <!--label for accessibilty for screen reader for the radio button-->
                         <label for="woodland-casket">Woodland Casket</label>
@@ -293,7 +293,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="pod.png" alt="Pod">
                         <!--radio button for the biodegradable pod option 
                             (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="biodegradable-pod" name="burialMethod" value="Biodegradable-pod"
+                        <input type="radio" id="biodegradable-pod" name="casket" value="Biodegradable-pod"
                             onclick="speakOption(this)">
                         <!--label for the casket option of biodegradable pod-->
                         <label for="biodegradable-pod">Biodegradable Pod</label>
@@ -305,7 +305,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                         <img src="cardboard.png" alt="pod">
                         <!--radio button for the cardboard option 
                             (the option speaks its name on click using JS speakOption())-->
-                        <input type="radio" id="cardboard-casket" name="burialMethod" value="Cardboard-casket"
+                        <input type="radio" id="cardboard-casket" name="casket" value="Cardboard-casket"
                             onclick="speakOption(this)">
                             <br>
                         <!--label for accessibilty for screen reader for the radio button for cardboard casket-->
