@@ -119,94 +119,97 @@
                     <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
                     <span class="details input-box text-7xl mb-10">Grave Location</span>
                 </div>
-            </div>
-            <br>
-            <!--$$$ Added the radio buttons for the location for the grave instead of the grave inscription-->
-            <div clas="flex flex-row">
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="well.png" alt="well">
-                    <input type="radio" id="Well" name="inscription" value="well" onclick="speakOption(this)">
-                    <label for="Well">Well</label>
+
+                <br>
+                <!--$$$ Added the radio buttons for the location for the grave instead of the grave inscription-->
+                <div clas="flex flex-row">
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="well.png" alt="well">
+                        <input type="radio" id="Well" name="inscription" value="well" onclick="speakOption(this)">
+                        <label for="Well">Well</label>
+                    </div>
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="birch.png" alt="birch">
+                        <input type="radio" id="Birch" name="inscription" value="birch" onclick="speakOption(this)">
+                        <label for="Birch">Birch</label>
+                    </div>
+                    <div class="radio-group text-center text-5xl ml-20">
+                        <img src="lookout.png" alt="lookout">
+                        <input type="radio" id="Lookout" name="inscription" value="lookout" onclick="speakOption(this)">
+                        <label for="Lookout">Look Out</label>
+                    </div>
                 </div>
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="birch.png" alt="birch">
-                    <input type="radio" id="Birch" name="inscription" value="birch" onclick="speakOption(this)">
-                    <label for="Birch">Birch</label>
-                </div>
-                <div class="radio-group text-center text-5xl ml-20">
-                    <img src="lookout.png" alt="lookout">
-                    <input type="radio" id="Lookout" name="inscription" value="lookout" onclick="speakOption(this)">
-                    <label for="Lookout">Look Out</label>
-                </div>
-            </div>
-            <br><br>
-            <!-- Burial Method as radio buttons -->
-            <div class="input-box">
-                <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
-                <span class="details input-box text-7xl mb-10">Select a burial method</span>
-            </div>
-            <br>
-            <div class="flex flex-row justify-center">
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="sea.png" alt="pod">
-                    <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial"
-                        onclick="speakOption(this)">
-                    <label for="sea-burial">Sea burial</label>
-                </div>
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="cardboard.png" alt="pod">
-                    <input type="radio" id="cardboard-burial" name="burialMethod" value="Cardboard-burial"
-                        onclick="speakOption(this)">
-                    <label for="cardboard-burial">Cardboard casket</label>
-                </div>
-            </div>
-            <br><br>
-            <div class="flex flex-row justify-center">
-                <div class="radio-group text-5xl text-center ml-20 mr-20">
-                    <img src="pod.png" alt="Pod">
-                    <input type="radio" id="biodegradable-pod" name="burialMethod" value="Biodegradable-pod"
-                        onclick="speakOption(this)">
-                    <label for="biodegradable-pod">Biodegradable Pod</label>
+                <br><br>
+                <!-- Burial Method as radio buttons -->
+                <div class="input-box text-5xl mt-20 mb-20">
+                    <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
+                    <span class="details input-box text-7xl mb-10">Select a burial method</span>
                 </div>
 
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="woodland.png" alt="pod">
-                    <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial"
-                        onclick="speakOption(this)">
-                    <label for="woodland-burial">Woodland Burial</label>
+                <br>
+                <div class="flex flex-row justify-center">
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="sea.png" alt="pod">
+                        <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial"
+                            onclick="speakOption(this)">
+                        <label for="sea-burial">Sea burial</label>
+                    </div>
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="cardboard.png" alt="pod">
+                        <input type="radio" id="cardboard-burial" name="burialMethod" value="Cardboard-burial"
+                            onclick="speakOption(this)">
+                        <label for="cardboard-burial">Cardboard casket</label>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <!-- Grave Marker as radio buttons -->
-            <div class="input-box">
-                <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
-                <span class="details input-box text-7xl mb-10">Pick a grave marker</span>
-            </div>
-            <br>
-            <div class="flex flex-row justify-center">
-                <div class="radio-group text-5xl text-center ml-20 mr-20">
-                    <img src="tree.png" alt="Tree">
-                    <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
-                    <label for="tree">Tree</label>
+                <br><br>
+                <div class="flex flex-row justify-center">
+                    <div class="radio-group text-5xl text-center ml-20 mr-20">
+                        <img src="pod.png" alt="Pod">
+                        <input type="radio" id="biodegradable-pod" name="burialMethod" value="Biodegradable-pod"
+                            onclick="speakOption(this)">
+                        <label for="biodegradable-pod">Biodegradable Pod</label>
+                    </div>
+
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="woodland.png" alt="pod">
+                        <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial"
+                            onclick="speakOption(this)">
+                        <label for="woodland-burial">Woodland Burial</label>
+                    </div>
                 </div>
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="flower.png" alt="Flower">
-                    <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
-                        onclick="speakOption(this)">
-                    <label for="flower-bed">Flower Bed</label>
+                <br>
+                <!-- Grave Marker as radio buttons -->
+                <div class="input-box">
+                    <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
+                    <span class="details input-box text-7xl mb-10">Pick a grave marker</span>
                 </div>
-            </div>
-            <br><br>
-            <div class="flex flex-row justify-center">
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="bench.png" alt="Bench">
-                    <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
-                    <label for="bench">Bench</label>
+                <br>
+                <div class="flex flex-row justify-center">
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="gps.png" alt="GPS">
+                        <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
+                        <label for="gps">GPS coordinates</label>
+                    </div>
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="flower.png" alt="Flower">
+                        <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
+                            onclick="speakOption(this)">
+                        <label for="flower-bed">Flower Bed</label>
+                    </div>
                 </div>
-                <div class="radio-group text-center text-5xl ml-20 mr-20">
-                    <img src="gps.png" alt="GPS">
-                    <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
-                    <label for="gps">GPS coordinates</label>
+                <br><br>
+                <div class="flex flex-row justify-center">
+                    <div class="radio-group text-center text-5xl ml-20 mr-20">
+                        <img src="bench.png" alt="Bench">
+                        <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
+                        <label for="bench">Bench</label>
+                    </div>
+                    <div class="radio-group text-5xl text-center ml-20 mr-20">
+                        <img src="tree.png" alt="Tree">
+                        <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
+                        <label for="tree">Tree</label>
+                    </div>
+
                 </div>
             </div>
             <br>
