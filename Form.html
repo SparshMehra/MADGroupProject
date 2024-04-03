@@ -1,8 +1,3 @@
-<!--
-    This is a responsive webform for natural burial initiative
-    created for people with accessbility needs.
-    Author(s):  Tooba Javed, Mohammad Zaid Khan, Sparsh Mehra, Nabila
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,334 +9,222 @@
     <link rel="stylesheet" href="Style.css">
     <!--Linking the tailwind styles-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!--Adding the javascript file (contains the functionality for the accesibility  features)-->
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <!-- Initially set to light mode -->
 
-<body class="light-mode">
+<body class="light-mode" onload="loadData()">
+
+
     <!-- Centering the container -->
     <div class="container flex justify-center items-center h-screen relative">
         <!-- Dark mode toggle button -->
-        <button id="darkModeToggle" onclick="toggleDarkMode()" class="absolute top-10 left-1 m-4">Dark Mode</button>
-
+        <button id="darkModeToggle" onclick="toggleDarkMode()" class="absolute top-10 right-1">
+            <i id="darkModeIcon" class="fas fa-moon text-4xl">&nbsp;Dark Mode</i>
+        </button>
         <!--The actual form starts from here, it contains the personal and burial information sections-->
-
+        <br><br><br>
         <!--Title for the personal information section-->
-        <div class="container">
-            <h1 class="text-2xl font-medium text-center">Personal Information</h1>
-          </div>
-          
+        <h1 class="text-8xl font-medium text-center mt-20 mb-14">Personal Information</h1>
 
         <!--*Button for submission-->
-        <form action="http://localhost:8080/submit" method="post"> <!-- DONT CHANGE THIS ACTION - ZAID -->
+        <form action="http://localhost:8080/submit" method="post">
             <!--div for storing the user information -->
             <div class="user-details">
                 <!--div for the name question-->
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <!--Adding the name field and the the title for the field, also contains the buttons to read the 
+                <div class="input-box mt-20 text-4xl flex items-center">
+                    <button type="button" class="mb-8" onclick="speakQuestion(this)"></button>
+                    <!--Adding the name field and the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                    <span class="details">Full Name</span>
+                    <span class="details flex-grow mb-14 mt-4 text-7xl w-48">Full Name</span>
                     <!--Input text field for the name-->
-                    <input type="text" placeholder="Enter your Full Name" name="fullName">
+                    <input type="text" class="details mb-14 mt-6 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                        placeholder="Enter your Full Name" name="fullName">
                     <!-- DONT CHANGE THIS NAME - ZAID -->
                     <!--Buttons to speak the field contents as well as the questions-->
-
-                    <button type="button" onclick="speakInput(this)"></button>
+                    <button type="button" class="details mb-14 mt-6" onclick="speakInput(this)"></button>
                 </div>
                 <!--div for the date of birth question-->
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <!--Adding the date of birth field and the the title for the field, also contains the buttons to read the 
+                <div class="input-box mt-20 text-4xl flex items-center">
+                    <button type="button" class="mb-8" onclick="speakQuestion(this)"></button>
+                    <!--Adding the date of birth field and the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                    <span class="details">Date of Birth</span>
+                    <span class="details flex-grow mb-14 mt-4 text-7xl w-48">Date of Birth</span>
                     <!--Input "date" field-->
-                    <input type="date" placeholder="Enter your Date of Birth" name="DOB">
+                    <input type="date" class="details mb-14 mt-6 h-16 text-lg rounded-lg w-96"
+                        placeholder="Enter your Date of Birth" name="DOB">
                     <!-- DONT CHANGE THIS NAME - ZAID -->
                     <!--Accessibility buttons to read the question and the input out aloud-->
 
-                    <button type="button" onclick="speakInput(this)"></button>
+                    <button type="button" class="details mb-14 mt-6" onclick="speakInput(this)"></button>
                 </div>
                 <!--div for the email question-->
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <!--Adding the email field and the the title for the field, also contains the buttons to read the 
+                <div class="input-box mt-20 text-4xl flex items-center">
+                    <button type="button" class="mb-8" onclick="speakQuestion(this)"></button>
+                    <!--Adding the email field and the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                    <span class="details">Email</span>
+                    <span class="details flex-grow mb-14 mt-4 text-7xl w-48">Email</span>
                     <!--input field for the email-->
-                    <input type="email" placeholder="Enter your email" name="email">
+                    <input type="email" class="details mb-14 mt-6 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                        placeholder="Enter your email" name="email">
                     <!-- DONT CHANGE THIS NAME - ZAID -->
                     <!--accessibility buttons to read out the question and the input-->
 
-                    <button type="button" onclick="speakInput(this)"></button>
+                    <button type="button" class="details mb-14 mt-6" onclick="speakInput(this)"></button>
                 </div>
                 <!--div for the contact number field-->
-                <div class="input-box">
-                    <!--Adding the contact number field and the the title for the field, also contains the buttons to read the 
+                <div class="input-box mt-20 text-4xl flex items-center">
+                    <!--Adding the contact number field and the title for the field, also contains the buttons to read the 
                         title and the data typed in the input field-->
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <span class="details">Contact number</span>
+                    <button type="button" class="mb-8" onclick="speakQuestion(this)"></button>
+                    <span class="details flex-grow mb-14 mt-4 text-7xl w-48 ">Contact number</span>
                     <!--input field for the contact number-->
-                    <input type="number" placeholder="Enter your contact number" name="contact">
+                    <input type="number" class="details mb-14 mt-6 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                        placeholder="Enter your contact number" name="contact">
                     <!-- DONT CHANGE THIS NAME - ZAID -->
                     <!--buttons for accessibility: reading out the question and the input-->
 
-                    <button type="button" onclick="speakInput(this)"></button>
+                    <button type="button" class="mb-14 mt-6" onclick="speakInput(this)"></button>
                 </div>
-                <!--div for the gender field-->
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-
-                    <span class="details">Select your Gender:</span>
-                    <div class="radio-group">
-                        <!--Added the icons for the genders-->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-gender-male" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
-                        </svg>
-                        <input type="radio" id="Male" name="gender" value="male" onchange="showGenderInput(this)"
-                            onclick="speakGender(this)">
-                        <label for="Male">Male</label>
-                    </div>
-                    <div class="radio-group">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-gender-female" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5" />
-                        </svg>
-                        <input type="radio" id="Female" name="gender" value="female" onchange="showGenderInput(this)"
-                            onclick="speakGender(this)">
-                        <label for="Female">Female</label>
-                    </div>
-                    <div class="radio-group">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-gender-ambiguous" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z" />
-                        </svg>
-                        <input type="radio" id="Other" name="gender" value="other" onchange="showGenderInput(this)"
-                            onclick="speakGender(this)">
-                        <label for="Other">Other</label>
-                    </div>
-                    <div class="radio-group">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-gender-trans" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1.707L3.5 2.793l.646-.647a.5.5 0 1 1 .708.708l-.647.646.822.822A4 4 0 0 1 8 3c1.18 0 2.239.51 2.971 1.322L14.293 1H11.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 0 1-3.05-5.814l-.95-.949-.646.647a.5.5 0 1 1-.708-.708l.647-.646L1 1.707V3.5a.5.5 0 0 1-1 0zm5.49 4.856a3 3 0 1 0 5.02 3.288 3 3 0 0 0-5.02-3.288" />
-                        </svg>
-                        <input type="radio" id="PreferNotToSay" name="gender" value="prefer-not-to-say"
-                            onchange="showGenderInput(this)" onclick="speakGender(this)">
-                        <label for="PreferNotToSay">Prefer not to say</label>
-                    </div>
-                </div>
-                <!--if the user chooses the other option for the gender, a new input field is presented to type in the
-                    user's gender identity-->
-
-                
             </div>
             <br>
-
-
             <!--div container that contains the title for the burial information-->
-            <div class="container">
-                <h1 class="text-2xl font-medium text-center">Burial Information</h1>
-              </div>
-              
+            <div class="newContainer">
+                <br>
+                <h1 class="text-9xl text-center mb-25">Burial Information</h1>
+            </div>
             <!--div class that contains the burial information questions-->
             <div class="user-details">
-
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
+                <div class="input-box text-4xl mt-20 mb-8">
+                    <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
                     <!--Adding the significant achievements field, also contains the buttons to read the 
-                        title and the data typed in the input field-->
-                    <span class="details">Significant Achievements</span>
+                            title and the data typed in the input field-->
+                    <span class="details flex-grow mb-10 mt-14 text-7xl w-48">Achievements</span>
                     <!--text field for the significant achievements input-->
-                    <input type="text" placeholder="Significant Achievements" name="achievements">
+                    <input type="text" class="details  mb-10 mt-14 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                        placeholder="Significant Achievements" name="achievements">
                     <!-- DONT CHANGE THIS NAME - ZAID -->
                     <!--buttons to read out the question prompt  and what has been typed into the input field-->
 
-                    <button type="button" onclick="speakInput(this)"></button>
+                    <button type="button" class="details mb-2 mt-6" onclick="speakInput(this)"></button>
                 </div>
-                <div class="input-box">
+                <div class="input-box text-5xl mt-20 mb-20">
                     <!--Adding the grave inscription field, also contains the buttons to read the 
-                        title and the data typed in the input field-->
+                            title and the data typed in the input field-->
                     <!--title for the field-->
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <span class="details">Grave Location</span>
-                    
-                    
-                    <!--$$$ Added the radio buttons for the location for the grsve instead of the grave inscription-->
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="well.jpg" alt="well">
-                        <input type="radio" id="Well" name="inscription" value="well" onclick="speakOption(this)">
-                        <label for="Well">Well</label>
-                        </div>
-                    </div>
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="yellow birch.jpg" alt="birch">
-                        <input type="radio" id="Birch" name="inscription" value="birch" onclick="speakOption(this)">
-                        <label for="Birch">Birch</label>
-                        </div>
-                    </div>
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="lookout.jpg" alt="lookout">
-                        <input type="radio" id="Lookout" name="inscription" value="lookout" onclick="speakOption(this)">
-                        <label for="Lookout">Look Out</label>
-                        </div>
-                    </div>
+                    <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
+                    <span class="details input-box text-7xl mb-10">Grave Location</span>
                 </div>
-                <!-- Burial Method as radio buttons -->
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
-                    <span class="details">Select a burial method</span>
-
-                    <!--I have changed the names, values and ids for some of the options -->
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="pod.png" alt="Pod">
-                        <input type="radio" id="biodegradable-pod" name="burialMethod" value="Biodegradable-pod"
-                            onclick="speakOption(this)">
-                        <label for="biodegradable-pod">Biodegradable Pod</label>
-                    </div>
-                    </div>
-                                        
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="cardboard.png" alt="pod">
-                            <!--changed the value to Cardboard-burial & id to cardboard @TOOBA-->
-                        <input type="radio" id="cardboard-burial" name="burialMethod" value="Cardboard-burial"
-                            onclick="speakOption(this)">
-                        <label for="cardboard-burial">Cardboard casket</label>
-                    </div>
-                    </div>
-                                        
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="sea.png" alt="pod">
-                            <!--changed the value to Cardboard-burial @TOOBA-->
-                        <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial"
-                            onclick="speakOption(this)">
-                        <label for="sea-burial">Sea burial</label>
-                    </div>
-                    </div>
-
-                    <div class="radio-group">
-                        <div class="burial-option">
-                            <img src="woodland.png" alt="pod">
-                        <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial"
-                            onclick="speakOption(this)">
-                        <label for="woodland-burial">Woodland Burial</label>
-                        </div>
-                    </div>
+            </div>
+            <br>
+            <!--$$$ Added the radio buttons for the location for the grave instead of the grave inscription-->
+            <div clas="flex flex-row">
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="well.png" alt="well">
+                    <input type="radio" id="Well" name="inscription" value="well" onclick="speakOption(this)">
+                    <label for="Well">Well</label>
                 </div>
-                <!-- Grave Marker as radio buttons -->
-                <div class="input-box">
-                    <button type="button" onclick="speakQuestion(this)"></button>
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="birch.png" alt="birch">
+                    <input type="radio" id="Birch" name="inscription" value="birch" onclick="speakOption(this)">
+                    <label for="Birch">Birch</label>
+                </div>
+                <div class="radio-group text-center text-5xl ml-20">
+                    <img src="lookout.png" alt="lookout">
+                    <input type="radio" id="Lookout" name="inscription" value="lookout" onclick="speakOption(this)">
+                    <label for="Lookout">Look Out</label>
+                </div>
+            </div>
+            <br><br>
+            <!-- Burial Method as radio buttons -->
+            <div class="input-box">
+                <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
+                <span class="details input-box text-7xl mb-10">Select a burial method</span>
+            </div>
+            <br>
+            <div class="flex flex-row justify-center">
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="sea.png" alt="pod">
+                    <input type="radio" id="sea-burial" name="burialMethod" value="Sea-burial"
+                        onclick="speakOption(this)">
+                    <label for="sea-burial">Sea burial</label>
+                </div>
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="cardboard.png" alt="pod">
+                    <input type="radio" id="cardboard-burial" name="burialMethod" value="Cardboard-burial"
+                        onclick="speakOption(this)">
+                    <label for="cardboard-burial">Cardboard casket</label>
+                </div>
+            </div>
+            <br><br>
+            <div class="flex flex-row justify-center">
+                <div class="radio-group text-5xl text-center ml-20 mr-20">
+                    <img src="pod.png" alt="Pod">
+                    <input type="radio" id="biodegradable-pod" name="burialMethod" value="Biodegradable-pod"
+                        onclick="speakOption(this)">
+                    <label for="biodegradable-pod">Biodegradable Pod</label>
+                </div>
 
-                    <span class="details">Pick a grave marker</span>
-                    <div class="marker-option">
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="woodland.png" alt="pod">
+                    <input type="radio" id="woodland-burial" name="burialMethod" value="Woodland burial"
+                        onclick="speakOption(this)">
+                    <label for="woodland-burial">Woodland Burial</label>
+                </div>
+            </div>
+            <br>
+            <!-- Grave Marker as radio buttons -->
+            <div class="input-box">
+                <button type="button" class="mt-4" onclick="speakQuestion(this)"></button>
+                <span class="details input-box text-7xl mb-10">Pick a grave marker</span>
+            </div>
+            <br>
+            <div class="flex flex-row justify-center">
+                <div class="radio-group text-5xl text-center ml-20 mr-20">
                     <img src="tree.png" alt="Tree">
-                
-                    <div class="radio-group">
-                        <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
-                        <label for="tree">Tree</label>
-                    </div>
-                    </div>
-
-                    <div class="marker-option">
-                        <img src="flower.png" alt="Flower">
-                    <div class="radio-group">
-                        <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
-                            onclick="speakOption(this)">
-                        <label for="flower-bed">Flower Bed</label>
-                    </div>
-                    </div>
-
-                    <div class="marker-option">
-                        <img src="bench.png" alt="Bench">
-                    <div class="radio-group">
-                        <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
-                        <label for="bench">Bench</label>
-                    </div>
-                    </div>
-
-                    <div class="marker-option">
-                        <img src="gps.png" alt="GPS">
-                    <div class="radio-group">
-                        <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
-                        <label for="gps">GPS coordinates</label>
-                    </div>
-                    </div>
-
+                    <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
+                    <label for="tree">Tree</label>
                 </div>
-
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="flower.png" alt="Flower">
+                    <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
+                        onclick="speakOption(this)">
+                    <label for="flower-bed">Flower Bed</label>
+                </div>
             </div>
+            <br><br>
+            <div class="flex flex-row justify-center">
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="bench.png" alt="Bench">
+                    <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
+                    <label for="bench">Bench</label>
+                </div>
+                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                    <img src="gps.png" alt="GPS">
+                    <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
+                    <label for="gps">GPS coordinates</label>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
             <!--div class that contains the button to submit all user inputs-->
-            <div class="button">
-                <input type="submit" value="Submit">
+            <div class="flex justify-center">
+                <button type="submit" value="Submit"
+                    class="custom-bg-cyan-500 text-white text-7xl py-4 px-4 rounded-md">&nbsp;&nbsp;Submit&nbsp;&nbsp;</button>
             </div>
+            <br>
+            <br>
         </form>
-
-
     </div>
     <script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
     <script src="saveInfo.js"></script>
     <script src="audio.js"></script>
-    <div class="m-0 p-0 box-border font-poppins text-base md:text-lg">
-     </div>
-     <div class="flex h-screen justify-center items-center">
-      </div>
-      <div class="container">
-        <div class="user-details flex flex-wrap">
-          <!-- Your user details content here -->
-        </div>
-      </div>
-      <button class="h-12 w-12 bg-blue-500 rounded-full text-white focus:outline-none">
-        <!-- Button content -->
-      </button>
-      <select class="appearance-none bg-transparent bg-no-repeat bg-right bg-center">
-        <!-- Select options -->
-      </select>
-      <div class="input-box relative">
-        <button class="absolute left-9 top-0">
-          <!-- Button content -->
-        </button>
-        <!-- Other elements within .input-box -->
-      </div>
-      <div class="light-mode bg-white text-black">
-        <!-- Content for light mode -->
-      </div>
-      <div class="dark-mode bg-gray-900 text-white">
-        <!-- Content for dark mode -->
-      </div>
-      <select class="dark:bg-gray-800 dark:text-white dark:border-white">
-        <!-- Select options -->
-      </select> 
-      <button type="submit" class="dark:hover:bg-gray-900">
-        <!-- Button content -->
-      </button>
-      <div class="radio-group inline-block w-52 mr-5">
-        <!-- Radio buttons -->
-      </div>
-      <style>
-        .radio-group label::before {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: white;
-            border: 1px solid #ccc;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    </style>   
-           
+
 </body>
+
+</html>

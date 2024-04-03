@@ -14,34 +14,51 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding-top: 740px; /* Add padding to the top */
+    padding-top: 1950px;
+    /* Add padding to the top */
 }
 
+.newContainer {
+    max-width: 2000px;
+    border-radius: 5px;
+    display: fixed;
+
+
+}
 
 
 .user-details .input-box span.details {
-    flex: 2; /* Add this line */
+    flex: 2;
+    /* Add this line */
 }
 
 .user-details .input-box {
-    width: 100%; /* Adjusted width */
-    margin: 15px auto; /* Adjusted margin */
+    width: 100%;
+    /* Adjusted width */
+    margin: 15px auto;
+    /* Adjusted margin */
     position: relative;
-    display: flex; /* Add this line */
+    display: flex;
+    /* Add this line */
     align-items: center;
 }
 
 .user-details .input-box input,
 .user-details .input-box select {
     flex: 2;
-    width: 100%; /* Adjusted width */
-    height: 49.5px; /* Adjusted height */
-    margin-right: auto; /* Center the input fields */
-    margin-left: auto; /* Center the input fields */
+    width: 100%;
+    /* Adjusted width */
+    height: 49.5px;
+    /* Adjusted height */
+    margin-right: auto;
+    /* Center the input fields */
+    margin-left: auto;
+    /* Center the input fields */
     border-radius: 5px;
     border: 1px solid #ccc;
     padding-left: 15px;
-    font-size: 1.05em; /* Adjusted font size */
+    font-size: 1.05em;
+    /* Adjusted font size */
     border-bottom-width: 2px;
     transition: all 0.3s ease;
 }
@@ -58,25 +75,16 @@
 }
 
 
-.user-details .input-box select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-}
-
-form .button input {
-    height: 100%;
-    width: 100%;
-}
-
 /* Dark mode styles */
 .dark-mode {
     background-color: #222222;
     color: #ffffff;
 }
+
+    /* Custom CSS to apply Tailwind Cyan 500 color */
+    .custom-bg-cyan-500 {
+        background-color: #06b6d4; /* Tailwind Cyan 500 color */
+    }
 
 
 /* Styling for input field in dark mode */
@@ -86,19 +94,14 @@ form .button input {
 .dark-mode input[type="password"],
 .dark-mode input[type="number"],
 .dark-mode textarea {
-    color: #ffffff; /* Text color */
-    background-color: #333333; /* Input background color */
-    border: 1px solid #ffffff; /* Border color */
+    color: #ffffff;
+    /* Text color */
+    background-color: #333333;
+    /* Input background color */
+    border: 1px solid #ffffff;
+    /* Border color */
 }
 
-/* Styling for submit button in dark mode */
-.dark-mode input[type="submit"] {
-    color: #ffffff; /* Text color */
-    background-color: #333333; /* Button background color */
-    border: 1px solid #ffffff; /* Border color */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
 
 /* Darken button background color on hover */
 .dark-mode input[type="submit"]:hover {
@@ -108,63 +111,53 @@ form .button input {
 /* for radio buttons @author Mohammad Zaid Khan*/
 .radio-group {
     display: inline-block;
-    width:220px; /* Adjust the width to your preference */
+    width: 300px;
+    /* Adjust the width to your preference */
     margin-right: 20px;
 }
 
 .radio-group input[type="radio"] {
-    display: none;
+    content: '';
+    top: 50%;
+    width: 24px;
+    height: 24px;
 }
 
 .radio-group label {
-    margin: 0 10px;
+    margin: 0 8px;
     cursor: pointer;
     position: relative;
-    padding-left: 25px;
+    padding-left: 0px;
+
 }
- 
-.radio-group input[type="radio"]:checked + label:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #1ab1bf;
-    transform: translateY(-50%);
-}
+
 .grave-markers {
     display: flex;
-    justify-content: space-around; /* Adjust as needed */
-    margin-bottom: 20px; /* Adjust spacing */
+    justify-content: space-around;
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Adjust spacing */
 }
 
-.marker-option img {
-    width: 100px; /* Adjust image size as needed */
-    height: auto;
-    margin-left: 40px;
-}
-.burial-option {
-    text-align: center;
-}
 
-.burial-option img {
-    width: 100px; /* Adjust image size as needed */
-    height: auto;
-    margin-left: 40px;
-}
 #darkModeToggle {
-    background-color: #170101; /* Dark background color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor style */
-    font-size: 16px; /* Font size */
-  }
-  
-  #darkModeToggle:hover {
-    background-color: #555; /* Darker background color on hover */
-  }
-  
+    background-color: #1ab1bf;
+    /* Dark background color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+#darkModeToggle:hover {
+    background-color: #0d7e89;
+    /* Darker background color on hover */
+}

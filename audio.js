@@ -23,9 +23,31 @@ function speakInput(button) {
         }
     }
 }
+function toggleDarkMode() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+
+    // Toggle dark mode class on body
+    document.body.classList.toggle('dark-mode');
+
+    // Toggle text and icon
+    if (document.body.classList.contains('dark-mode')) {
+        // Dark mode enabled
+        darkModeToggle.innerHTML = "<i class='fas fa-sun text-4xl'>&nbsp;Light Mode</i> ";
+    } else {
+        // Dark mode disabled
+        darkModeToggle.innerHTML = "<i class='fas fa-moon text-4xl'>&nbsp;Dark Mode</i> ";
+    }
+}
 
 function speakQuestion(button) {
-    var question = button.parentNode.querySelector('.details').textContent;
+    var questionElement = button.parentNode.querySelector('.details');
+    if (!questionElement) {
+        console.log("No question element found.");
+        return;
+    }
+    var question = questionElement.innerText.trim();
+    console.log("Question:", question); // Check if we're getting the correct question text
     speak(question);
 }
 
@@ -74,9 +96,5 @@ function speak(text) {
     var utterance = new SpeechSynthesisUtterance(text);
     synth.speak(utterance);
 }
-// Function to toggle dark mode
-            function toggleDarkMode() {
-                const body = document.body;
-                body.classList.toggle('dark-mode');
-            }
+
 
