@@ -11,7 +11,7 @@
 body {
     position: relative;
     /* Set the background image and prevent it from repeating */
-    background-image: url(3.jpg);
+    background-image: url(../Images/3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

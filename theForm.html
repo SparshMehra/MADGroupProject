@@ -8,7 +8,7 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
 <head>
     <meta charset="UTF-8">
     <title>Natural Burial Form</title>
-    <link rel="stylesheet" href="formStyles.css">
+    <link rel="stylesheet" href="StyleSheets/formStyles.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,17 +119,17 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                 <br>
                 <div clas="flex flex-row">
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="well.png" alt="well">
+                        <img src="Images/well.png" alt="well">
                         <input type="radio" id="Well" name="graveLocation" value="well" onclick="speakOption(this)">
                         <label for="Well">Well</label>
                     </div>
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="birch.png" alt="birch">
+                        <img src="Images/birch.png" alt="birch">
                         <input type="radio" id="Birch" name="graveLocation" value="birch" onclick="speakOption(this)">
                         <label for="Birch">Birch</label>
                     </div>
                     <div class="radio-group text-center text-5xl ml-20">
-                        <img src="lookout.png" alt="lookout">
+                        <img src="Images/lookout.png" alt="lookout">
                         <input type="radio" id="Lookout" name="graveLocation" value="lookout" onclick="speakOption(this)">
                         <label for="Lookout">Look Out</label>
                     </div>
@@ -143,14 +143,14 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                 <br>
                 <div class="flex flex-row justify-center">
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="shroud.png" alt="pod">
+                        <img src="Images/shroud.png" alt="pod">
                         <input type="radio" id="shroud" name="casket" value="Shroud"
                                onclick="speakOption(this)">
                         <br>
                         <label for="shroud">Shroud</label>
                     </div>
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="wooden.png" alt="pod">
+                        <img src="Images/wooden.png" alt="pod">
                         <input type="radio" id="woodland-casket" name="casket" value="Woodland casket"
                                onclick="speakOption(this)">
                         <label for="woodland-casket">Woodland Casket</label>
@@ -159,13 +159,13 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                 <br><br>
                 <div class="flex flex-row justify-center">
                     <div class="radio-group text-center text-5xl text-center ml-20 mr-20">
-                        <img src="pod.png" alt="Pod">
+                        <img src="Images/pod.png" alt="Pod">
                         <input type="radio" id="biodegradable-pod" name="casket" value="Biodegradable-pod"
                                onclick="speakOption(this)">
                         <label for="biodegradable-pod">Biodegradable Pod</label>
                     </div>
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="cardboard.png" alt="pod">
+                        <img src="Images/cardboard.png" alt="pod">
                         <input type="radio" id="cardboard-casket" name="casket" value="Cardboard-casket"
                                onclick="speakOption(this)">
                         <br>
@@ -181,12 +181,12 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                 <br>
                 <div class="flex flex-row justify-center">
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="gps.png" alt="GPS">
+                        <img src="Images/gps.png" alt="GPS">
                         <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
                         <label for="gps">GPS coordinates</label>
                     </div>
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="flower.png" alt="Flower">
+                        <img src="Images/flower.png" alt="Flower">
                         <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
                                onclick="speakOption(this)">
                         <br>
@@ -196,19 +196,260 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
                 <br><br>
                 <div class="flex flex-row justify-center">
                     <div class="radio-group text-center text-5xl ml-20 mr-20">
-                        <img src="bench.png" alt="Bench">
+                        <img src="Images/bench.png" alt="Bench">
                         <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
                         <label for="bench">Bench</label>
                     </div>
                     <div class="radio-group text-5xl text-center ml-20 mr-20">
-                        <img src="tree.png" alt="Tree">
+                        <img src="Images/tree.png" alt="Tree">
                         <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
                         <label for="tree">Tree</label>
                     </div>
                 </div>
             </div>
             <br>
-            <br>
+            <br><!--This is an interactive webform for natural burial: the form is created to
+accommodate our clients' accessibility needs.
+
+Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <title>Natural Burial Form</title>
+                <link rel="stylesheet" href="StyleSheets/formStyles.css">
+                <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </head>
+
+            <body class="light-mode">
+            <div class="container flex justify-center items-center h-screen relative">
+                <!-- Dark Mode Toggle Button -->
+                <button id="darkModeToggle" aria-label="Button to switch between different themes" onclick="toggleDarkMode()"
+                        class="absolute top-10 right-1">
+                    <i id="darkModeIcon" class="fas fa-moon text-4xl">&nbsp;Dark Mode</i>
+                </button>
+                <br><br><br>
+                <h1 class="text-9xl text-center mb-25">Personal Information</h1>
+                <br><br>
+                <!-- Form to collect user's personal information -->
+                <form action="http://140.184.41.238:8080/submit" method="post">
+                    <div class="user-details">
+                        <!-- Input fields for user's personal information -->
+                        <div class="input-box mt-20 text-4xl flex items-center">
+                            <!-- Full Name -->
+                            <button type="button" class="mb-8" aria-label="Read Full Name question" onclick="speakQuestion(this)"></button>
+                            <span class="details flex-grow mb-14 mt-4 text-7xl w-48">Full Name:</span>
+                            <input type="text" class="details mb-14 mt-6 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                                   placeholder="Enter your Full Name" name="fullName">
+                            <button type="button" class="details mb-14 mt-6" aria-label="Speak Full Name input" onclick="speakInput(this)"></button>
+                        </div>
+                        <div class="input-box mt-20 text-4xl flex items-center">
+                            <!-- Date of Birth -->
+                            <button type="button" class="mb-8" aria-label="Read Date of Birth question" onclick="speakQuestion(this)"></button>
+                            <span class="details flex-grow mb-14 mt-4 text-7xl w-48">Date of Birth:</span>
+                            <input type="date" class="details mb-14 mt-6 h-16 text-lg rounded-lg w-96"
+                                   placeholder="Enter your Date of Birth" name="DOB">
+                            <button type="button" class="details mb-14 mt-6" aria-label="Speak Date of Birth input" onclick="speakInput(this)"></button>
+                        </div>
+                        <div class="input-box mt-20 text-4xl flex items-center">
+                            <!-- Email -->
+                            <button type="button" class="mb-8" aria-label="Read Email question" onclick="speakQuestion(this)"></button>
+                            <span class="details flex-grow mb-14 mt-4 text-7xl w-48">Email:</span>
+                            <input type="email" class="details mb-14 mt-6 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                                   placeholder="Enter your email" name="email">
+                            <button type="button" class="details mb-14 mt-6" aria-label="Speak Email input" onclick="speakInput(this)"></button>
+                        </div>
+                        <div class="input-box mt-20 text-4xl flex items-center">
+                            <!-- Contact number -->
+                            <button type="button" class="mb-8" aria-label="Read Contact number question" onclick="speakQuestion(this)"></button>
+                            <span class="details flex-grow mb-14 mt-4 text-7xl w-48 ">Contact number:</span>
+                            <input type="number" class="details mb-14 mt-6 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                                   placeholder="Enter your contact number" name="contact">
+                            <button type="button" class="mb-14 mt-6" aria-label="Speak Contact number input" onclick="speakInput(this)"></button>
+                        </div>
+                        <div class="input-box mt-20 text-4xl flex items-center">
+                            <button type="button" class="mb-8" aria-label="Read Contact number question" onclick="speakQuestion(this)"></button>
+                            <span class="details flex-grow mb-14 mt-4 text-7xl w-48 ">Gender:</span>
+                        </div>
+                        <div class="flex flex-col flex-wrap text-5xl">
+                            <div class="radio-group mb-8 ml-10">
+                                <!-- Gender -->
+                                <input type="radio" id="Male" name="gender" value="male" onchange="showGenderInput(this)"
+                                       onclick="speakGender(this)">
+                                <label for="Male">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="radio-group mb-8 ml-10">
+                                <input type="radio" id="Female" name="gender" value="female" onchange="showGenderInput(this)"
+                                       onclick="speakGender(this)">
+                                <label for="Female">
+                                    Female
+                                </label>
+                            </div>
+                            <div class="radio-group mb-8 ml-10">
+                                <input type="radio" id="Other" name="gender" value="other" onchange="showGenderInput(this)"
+                                       onclick="speakGender(this)">
+                                <label for="Other">
+                                    Other
+                                </label>
+                            </div>
+                            <div class="radio-group mb-8 ml-10">
+                                <input type="radio" id="decline-to-state" name="gender" value="decline-to-state" onchange="showGenderInput(this)"
+                                       onclick="speakGender(this)">
+                                <label for="decline-to-state">
+                                    Opt Out
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="newContainer">
+                            <br><br><br>
+                            <!-- Burial Information section for user to fill out -->
+                            <h1 class="text-9xl text-center mb-25">Burial Information</h1>
+                        </div>
+                        <br><br><br>
+                        <div class="user-details">
+                            <div class="input-box text-4xl mt-20 mb-8">
+                                <!-- Achievements -->
+                                <button type="button" class="mt-4" aria-label="Read Achievements question" onclick="speakQuestion(this)"></button>
+                                <span class="details flex-grow mb-10 mt-14 text-7xl w-48">Achievements:</span>
+                                <input type="text" class="details  mb-10 mt-14 h-16 text-lg placeholder-gray-500 rounded-lg w-96"
+                                       placeholder="Significant Achievements" name="achievements">
+                                <button type="button" class="details mb-2 mt-6" aria-label="Speak Achievements input" onclick="speakInput(this)"></button>
+                            </div>
+                            <div class="input-box text-5xl mt-20 mb-20">
+                                <!-- Grave Location -->
+                                <button type="button" class="mt-4" aria-label="Read Grave Location question" onclick="speakQuestion(this)"></button>
+                                <span class="details input-box text-7xl mb-10">Grave Location:</span>
+                            </div>
+                            <br>
+                            <div clas="flex flex-row">
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/well.png" alt="well">
+                                    <input type="radio" id="Well" name="graveLocation" value="well" onclick="speakOption(this)">
+                                    <label for="Well">Well</label>
+                                </div>
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/birch.png" alt="birch">
+                                    <input type="radio" id="Birch" name="graveLocation" value="birch" onclick="speakOption(this)">
+                                    <label for="Birch">Birch</label>
+                                </div>
+                                <div class="radio-group text-center text-5xl ml-20">
+                                    <img src="Images/lookout.png" alt="lookout">
+                                    <input type="radio" id="Lookout" name="graveLocation" value="lookout" onclick="speakOption(this)">
+                                    <label for="Lookout">Look Out</label>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="input-box text-5xl mt-20 mb-20">
+                                <!-- Casket Option -->
+                                <button type="button" class="mt-4" aria-label="Read Burial Method question" onclick="speakQuestion(this)"></button>
+                                <span class="details input-box text-7xl mb-15">Select a casket/shroud:</span>
+                            </div>
+                            <br>
+                            <div class="flex flex-row justify-center">
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/shroud.png" alt="pod">
+                                    <input type="radio" id="shroud" name="casket" value="Shroud"
+                                           onclick="speakOption(this)">
+                                    <br>
+                                    <label for="shroud">Shroud</label>
+                                </div>
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/wooden.png" alt="pod">
+                                    <input type="radio" id="woodland-casket" name="casket" value="Woodland casket"
+                                           onclick="speakOption(this)">
+                                    <label for="woodland-casket">Woodland Casket</label>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="flex flex-row justify-center">
+                                <div class="radio-group text-center text-5xl text-center ml-20 mr-20">
+                                    <img src="Images/pod.png" alt="Pod">
+                                    <input type="radio" id="biodegradable-pod" name="casket" value="Biodegradable-pod"
+                                           onclick="speakOption(this)">
+                                    <label for="biodegradable-pod">Biodegradable Pod</label>
+                                </div>
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/cardboard.png" alt="pod">
+                                    <input type="radio" id="cardboard-casket" name="casket" value="Cardboard-casket"
+                                           onclick="speakOption(this)">
+                                    <br>
+                                    <label for="cardboard-casket">Cardboard casket</label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="input-box">
+                                <!-- Grave Marker -->
+                                <button type="button" class="mt-4" aria-label="Read Grave Marker question" onclick="speakQuestion(this)"></button>
+                                <span class="details input-box text-7xl mb-10">Pick a grave marker:</span>
+                            </div>
+                            <br>
+                            <div class="flex flex-row justify-center">
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/gps.png" alt="GPS">
+                                    <input type="radio" id="gps" name="graveMarker" value="GPS" onclick="speakOption(this)">
+                                    <label for="gps">GPS coordinates</label>
+                                </div>
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/flower.png" alt="Flower">
+                                    <input type="radio" id="flower-bed" name="graveMarker" value="Flower Bed"
+                                           onclick="speakOption(this)">
+                                    <br>
+                                    <label for="flower-bed">Flower Bed</label>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="flex flex-row justify-center">
+                                <div class="radio-group text-center text-5xl ml-20 mr-20">
+                                    <img src="Images/bench.png" alt="Bench">
+                                    <input type="radio" id="bench" name="graveMarker" value="Bench" onclick="speakOption(this)">
+                                    <label for="bench">Bench</label>
+                                </div>
+                                <div class="radio-group text-5xl text-center ml-20 mr-20">
+                                    <img src="Images/tree.png" alt="Tree">
+                                    <input type="radio" id="tree" name="graveMarker" value="Tree" onclick="speakOption(this)">
+                                    <label for="tree">Tree</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div>
+
+                        </div>
+                        <div class="flex justify-between">
+                            <!-- Button 1 -->
+                            <button type="button" class="custom-bg-cyan-500 text-white text-7xl py-4 px-4 rounded-md">&nbsp;&nbsp;Download&nbsp;&nbsp;</button>
+                            <!-- Button 2 (aligned to the right) -->
+                            <div>
+                                <button type="button" class="custom-bg-cyan-500 text-white text-7xl py-4 px-4 rounded-md">&nbsp;&nbsp;Upload&nbsp;&nbsp;</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <!-- Submit button to submit the form -->
+                            <button type="submit" value="Submit"
+                                    class="custom-bg-cyan-500 text-white text-7xl py-4 px-4 rounded-md">&nbsp;&nbsp;Submit&nbsp;&nbsp;</button>
+
+                        </div>
+
+                        <br>
+                        <br>
+                    </div>
+                </form>
+            </div>
+            <!-- JavaScript files for the form -->
+            <script src="Scripts/gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
+            <script src="Scripts/saveInfo.js"></script>
+            <script src="Scripts/voiceTheme.js"></script>
+            </body>
+            </html>
+
             <br>
             <div>
                 
@@ -234,8 +475,8 @@ Authors: Mohammed Zaid, Nabila Saimon Bithi, Sparsh Mehra, Tooba Javed-->
     </form>
 </div>
 <!-- JavaScript files for the form -->
-<script src="gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
-<script src="saveInfo.js"></script>
-<script src="voiceTheme.js"></script>
+<script src="Scripts/gender.js"></script> <!-- DONT CHANGE THIS - ZAID -->
+<script src="Scripts/saveInfo.js"></script>
+<script src="Scripts/voiceTheme.js"></script>
 </body>
 </html>
