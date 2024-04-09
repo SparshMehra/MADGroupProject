@@ -1,0 +1,23 @@
+{
+  "name": "madnode",
+  "version": "1.0.0",
+  "description": "node js backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "todo",
+    "api",
+    "rest",
+    "task",
+    "node",
+    "express"
+  ],
+  "author": "Mohammad Zaid Khan",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

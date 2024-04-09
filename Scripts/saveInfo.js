@@ -48,3 +48,56 @@ function loadData() {
         console.log('No saved data found');
     }
 }
+
+/**
+ * Client side Script for the form download and upload
+ *
+ * @Author: Mohammad Zaid Khan
+ */
+function downloadData() {
+    fetch('http://localhost:3000/download', {
+        method: 'GET'
+    })
+        .then(response => response.json())
+        .then(data => {
+            for (const [key, value] of Object.entries(data)) {
+                const inputs = document.querySelectorAll(`[name="${key}"]`);
+
+                inputs.forEach(input => {
+                    if (input.type === 'radio') {
+                        // for radio buttons, check the one that has the matching value
+                        input.checked = input.value === value;
+                    } else {
+                        input.value = value;
+                    }
+                });
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function uploadData() {
+    const formElement = document.querySelector('form');
+    const formData = new FormData(formElement);
+    const formObject = {};
+    formData.forEach((value, key) => formObject[key] = value);
+
+    console.log(JSON.stringify(formObject)); // Debugging line to inspect the payload
+
+    fetch('http://localhost:3000/upload', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formObject)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => console.log('Success:', data))
+        .catch(error => console.error('Error:', error));
+}
+
